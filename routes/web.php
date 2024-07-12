@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +20,8 @@ Route::get('/', function () {
 });
 Route::get('/hihi', function () {
     return view('index');
+});
+Route::get('/categories', function () {
+    // DB::table('categories')
+    return view('categories');
 });
