@@ -22,6 +22,8 @@ Route::get('/hihi', function () {
     return view('index');
 });
 Route::get('/categories', function () {
-    // DB::table('categories')
-    return view('categories');
+//    $data = DB::table('categories')->get();  // lấy ra tất cả bản ghi trong bảng categories
+   $data = DB::table('categories')->first(); // lọc ra bản ghi đầu tiên trong bảng categories
+    dd($data);
+    return $data;
 });
