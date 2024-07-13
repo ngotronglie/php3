@@ -22,7 +22,7 @@ Route::get('/hihi', function () {
     return view('index');
 });
 Route::get('/categories', function () {
-//    $data = DB::table('categories')->get();  // lấy ra tất cả bản ghi trong bảng categories
+   $data = DB::table('categories')->get();  // lấy ra tất cả bản ghi trong bảng categories
 //    $data = DB::table('categories')->first(); // lọc ra bản ghi đầu tiên trong bảng categories
 
         // $data = DB::table('categories')
@@ -88,10 +88,13 @@ Route::get('/categories', function () {
         // select('categories.name as category_name', 'products.nameelect('categories.*', 'products.name_product as product_name')
         // ->get();
 
-        $data = DB::table('categories')
-        ->rightJoin('products', 'categories.id', '=', 'products.categories_id')
-        -> select('categories.*', 'products.name_product as product_name')
-        ->get();
+        // $data = DB::table('categories')
+        // ->rightJoin('products', 'categories.id', '=', 'products.categories_id')
+        // -> select('categories.*', 'products.name_product as product_name')
+        // ->get();
+
+
+
 
     dd($data);
     return $data;
