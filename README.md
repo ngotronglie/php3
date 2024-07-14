@@ -98,17 +98,25 @@ php artisan make:seeder <'name class'> ['DanhMucSeeder']
 php artisan db:seed --class=<'name class'> [DanhMucSeeder]
 
 ```
+----
 
 #### - Create Controller
 
 ```
 
 php artisan make:controller <class Controller> ['SanPhamController']   --resource
-
+----
 ```
 
 #### - Create Model 
 
 ```
 php artisan make:model <name class >['SanPham]
+```
+
+---- 
+install faker 
+
+```
+composer require fakerphp/faker
 ```

@@ -22,8 +22,10 @@ class SanPhamController extends Controller
         //
         $ListSanPham = $this->san_phams->getAllSanPham();
         // dd($ListSanPham);
-        return $ListSanPham;
 
+        // goi den view de hien thi ra
+
+        return view("admin.product.list-product", ["listSanPham"=> $ListSanPham]);
 
     }
 
