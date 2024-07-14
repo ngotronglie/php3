@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\SanPham;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SanPhamController extends Controller
 {
@@ -34,7 +36,8 @@ class SanPhamController extends Controller
      */
     public function create()
     {
-        //
+        $listDanhMuc = DB::table("danh_muc")->select("*")->get();
+        return view("admin.product.add-product" , ['danh_mucs' => $listDanhMuc]);
     }
 
     /**
@@ -42,7 +45,28 @@ class SanPhamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // xu ly van de post du lieu nen
+        if($request->hasFile('image')){
+            // neu co anh thi 
+            $filename = $request->file('image')->store('uploads/sanpham', 'public');
+        }else{
+            $filename = null; 
+        }
+        $dataInsert = [
+            'image' => $filename,
+            'name' => $request->name,
+            'quantity' => $request->quantity,
+            'price' => $request->price,
+            'createdAt' => $request->createdAt,
+            'description' => $request->description,
+            'Categories' => $request->Categories,
+
+        ];
+        // dd($dataInsert);
+
+        $this ->san_phams->createSanPham( $dataInsert);
+        return redirect()->route('sanpham.index');
+
     }
 
     /**

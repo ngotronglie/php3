@@ -21,4 +21,21 @@ class SanPham extends Model
 
         return $san_phams;
     }
+
+    // xu li them san pham
+
+
+    public function createSanPham($data){ 
+        DB::table("san_pham")->insert(
+    [
+            'image_san_pham' => $data['image'],
+            'name_san_pham' => $data['name'],
+            'quantity_san_pham' => $data['quantity'],
+            'price_san_pham' => $data['price'],
+            'created_at' => $data['createdAt'],
+            'description_san_pham' => $data['description'],
+            'danh_muc_id' => $data['Categories'],
+            ]
+        );
+    }
 }

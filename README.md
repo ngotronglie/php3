@@ -120,3 +120,10 @@ install faker
 ```
 composer require fakerphp/faker
 ```
+--- 
+#### 
+chuyen file anh len folder public storage / uploads/ ....
+
+```
+php artisan storage:link
+```

@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mb-5">
         <nav class="navbar navbar-expand-sm bg-light">
 
             <div class="container-fluid">
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1</a>
+                        <a class="nav-link" href="/sanpham">List Product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link 2</a>
@@ -35,8 +35,8 @@
 
         {{-- end nav --}}
 
-        <main>
-            {{-- yield: chi dinh vung hien thi cua session --}}
+        <main class="mt-5">
+            {{-- yield: chi dinh vung hien thi cua section --}}
             @yield('content')
         </main>
 
