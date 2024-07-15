@@ -50,7 +50,7 @@
 
                     </td>
                     <td>
-                        <a href="#" class="btn btn-warning">update</a>
+                        <a href="{{ route('sanpham.edit', $SanPham->id) }}" class="btn btn-warning">update</a>
                         <a href="#" class="btn btn-danger">delete</a>
                     </td>
                 </tr>

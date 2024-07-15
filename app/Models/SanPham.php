@@ -38,4 +38,12 @@ class SanPham extends Model
             ]
         );
     }
+
+
+    public function getID($id){
+        $sanphamGetID = DB::table("san_pham")->select("*")->where("id",$id)->get();
+        return $sanphamGetID;
+    }
+
+    
 }

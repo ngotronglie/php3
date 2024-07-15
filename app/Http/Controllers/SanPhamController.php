@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\DanhMuc;
 use App\Models\SanPham;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +23,6 @@ class SanPhamController extends Controller
     {
         //
         $ListSanPham = $this->san_phams->getAllSanPham();
-        // dd($ListSanPham);
 
         // goi den view de hien thi ra
 
@@ -82,8 +81,21 @@ class SanPhamController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // Tìm sản phẩm theo ID sử dụng Eloquent model
+        $sanphamGetId = $this->san_phams->getID($id);
+    
+        // Lấy danh sách danh mục
+        $danhmucSelected = DB::table("danh_muc")->select("*")->get();
+    
+        // Nếu không tìm thấy sản phẩm, chuyển hướng về trang danh sách sản phẩm
+        if (!$sanphamGetId) {
+            return redirect()->route('sanpham.index');
+        }
+    
+        // Truyền dữ liệu sang view 'update-product'
+        return view('admin.product.update-product', compact('sanphamGetId', 'danhmucSelected'));
     }
+    
 
     /**
      * Update the specified resource in storage.
