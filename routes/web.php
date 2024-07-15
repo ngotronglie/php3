@@ -45,6 +45,9 @@ Route::get('/blog-detail', function () {
 Route::get('/login-register', function () {
     return view('client.pages.login-register');
 });
+Route::get('/my-account', function () {
+    return view('client.pages.my-account');
+});
 
 Route::resource('/', MainController::class);
 Route::resource('/contact', ContactController::class);

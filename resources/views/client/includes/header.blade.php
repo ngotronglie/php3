@@ -27,7 +27,7 @@
                                 <li class="angle-shape"><a href="#">My Account </a>
                                     {{-- hello, user --}}
                                     <ul class="submenu">
-                                        <li><a href="#">My account page </a></li>
+                                        <li><a href="/my-account">My account page </a></li>
                                         <li><a href="/login-register">login/register </a></li>
                                         <li><a href="/">logout </a></li>
                                     </ul>
