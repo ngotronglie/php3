@@ -9,7 +9,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="active">About us </li>
                 </ul>

@@ -23,5 +23,28 @@ Route::get('/about', function () {
     return view('client.pages.about');
 });
 
+Route::get('/shop', function () {
+    return view('client.pages.shop');
+});
+
+Route::get('/product-detail', function () {
+    return view('client.pages.product-detail');
+});
+Route::get('/cart', function () {
+    return view('client.pages.cart');
+});
+Route::get('/checkout', function () {
+    return view('client.pages.checkout');
+});
+Route::get('/blog', function () {
+    return view('client.pages.blog');
+});
+Route::get('/blog-detail', function () {
+    return view('client.pages.blog-detail');
+});
+Route::get('/login-register', function () {
+    return view('client.pages.login-register');
+});
+
 Route::resource('/', MainController::class);
 Route::resource('/contact', ContactController::class);

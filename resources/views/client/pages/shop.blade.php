@@ -1,4 +1,4 @@
-@extends()
+@extends('client.index');
 
 @section('main')
     <div class="breadcrumb-area pt-95 pb-100 bg-img" style="background-image:url(assets/images/bg/breadcrumb.jpg);">
@@ -9,7 +9,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="active">shop page </li>
                 </ul>
@@ -48,8 +48,8 @@
                                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                         <div class="product-wrap product-border-1 mb-30">
                                             <div class="product-img">
-                                                <a href="product-details.html"><img
-                                                        src="assets/images/product/hm1-pro-1.jpg" alt="product"></a>
+                                                <a href="/product-detail"><img src="assets/images/product/hm1-pro-1.jpg"
+                                                        alt="product"></a>
                                                 <span class="product-badge">-30%</span>
                                                 <div class="product-action">
                                                     <a data-bs-toggle="modal" data-bs-target="#exampleModal"

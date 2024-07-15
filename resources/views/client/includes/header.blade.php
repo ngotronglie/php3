@@ -17,19 +17,19 @@
                                 <li><a href="/contact"> Contact </a></li>
                                 <li><a href="/about"> About </a></li>
 
-                                <li class="angle-shape"><a href="#">Shop </a>
+                                <li class="angle-shape"><a href="/shop">Shop</a>
                                     <ul class="submenu">
-                                        <li><a href="cart.html">cart page </a></li>
-                                        <li><a href="checkout.html">checkout </a></li>
+                                        <li><a href="/cart">cart page </a></li>
+                                        <li><a href="/checkout">checkout </a></li>
                                     </ul>
                                 </li>
-                                <li class="angle-shape"><a href="blog.html"> Blog </a></li>
+                                <li class="angle-shape"><a href="/blog"> Blog </a></li>
                                 <li class="angle-shape"><a href="#">My Account </a>
                                     {{-- hello, user --}}
                                     <ul class="submenu">
                                         <li><a href="#">My account page </a></li>
-                                        <li><a href="login-register.html">login/register </a></li>
-                                        <li><a href="404.html">logout </a></li>
+                                        <li><a href="/login-register">login/register </a></li>
+                                        <li><a href="/">logout </a></li>
                                     </ul>
                                 </li>
 
