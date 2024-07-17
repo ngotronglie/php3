@@ -1,6 +1,6 @@
-DOCS
+# DOCS 
 
-Xây dựng web bán quần áo LARAVEL	
+### Xây dựng web bán quần áo LARAVEL	
  -Trang frontend:
  -  Hiển thị danh mục quần áo, quần áo, banner marketing, khuyến mại
  - Giỏ hàng, Thanh toán online, gửi email hóa đơn

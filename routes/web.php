@@ -51,3 +51,12 @@ Route::get('/my-account', function () {
 
 Route::resource('/', MainController::class);
 Route::resource('/contact', ContactController::class);
+
+
+
+//// Route admin
+
+
+Route::get('/dashboad', function () {
+    return view('admin.dashboad');
+});

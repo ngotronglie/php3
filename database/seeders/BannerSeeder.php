@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 
 class BannerSeeder extends Seeder
 {
@@ -13,8 +13,15 @@ class BannerSeeder extends Seeder
      */
     public function run(): void
     {
-        // DB::table("banner")->insert(
-        //     []
-        // );
+        $faker = Faker::create();
+
+        for ($i = 0; $i < 10; $i++) {
+            DB::table('banner')->insert([
+                'name' => $faker->word,
+                'pathImg' => $faker->imageUrl(),
+                'startDate' => $faker->dateTimeBetween('-1 month', '+1 month'),
+                'status' => rand(0, 2),
+            ]);
+        }
     }
 }
