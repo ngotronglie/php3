@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -22,8 +21,9 @@ Route::get('/hihi', function () {
     return view('index');
 });
 Route::get('/categories', function () {
+        //=================================================================
    $data = DB::table('categories')->get();  // lấy ra tất cả bản ghi trong bảng categories
-//    $data = DB::table('categories')->first(); // lọc ra bản ghi đầu tiên trong bảng categories
+        //    $data = DB::table('categories')->first(); // lọc ra bản ghi đầu tiên trong bảng categories
 
         // $data = DB::table('categories')
         //     -> where('id', 1)->get(); // lấy category co id = 1 trong bảng categories
@@ -35,18 +35,17 @@ Route::get('/categories', function () {
 
 
 
-        // like
+        // like====================================================================
 
         // $data = DB::table('categories')
         //     ->where('name', 'like', '%lie%')->get();    
 
-        // toán tử 
+        // toán tử  =====================================================================
 
         // $data = DB::table('categories')
         //     ->where('id', '>=', 2)->get();   // => id =2
 
-
-
+        // ==========================================================================================
         // and
 
             //   c1: 
@@ -61,7 +60,7 @@ Route::get('/categories', function () {
                 //     ['name', 'like', '%lie%']
                 // ])->get();
 
-
+        //==============================================
 
         // or 
 
@@ -82,12 +81,12 @@ Route::get('/categories', function () {
         //     ->join('products', 'categories.id', '=', 'products.categories_id')
         //     // ->select('categories.name as category_name', 'products.name as product_name')
         //     ->get();
-
+            //---------------------------------------------------------------------
         // $data = DB::table('categories')
         // ->leftjoin('products', 'categories.id', '=', 'products.categories_id')
         // select('categories.name as category_name', 'products.nameelect('categories.*', 'products.name_product as product_name')
         // ->get();
-
+            //-------------------------------------
         // $data = DB::table('categories')
         // ->rightJoin('products', 'categories.id', '=', 'products.categories_id')
         // -> select('categories.*', 'products.name_product as product_name')
@@ -98,4 +97,16 @@ Route::get('/categories', function () {
 
     dd($data);
     return $data;
+});
+
+Route::get('/post', function () {
+
+    // truy vấn lấy tất 
+
+    // $data = App\Models\Post::all(); 
+    // $data = App\Models\Post::get()->toArray();
+    $data = App\Models\Post::query()->get()->toArray(); // có query thì sài như query buider
+    dd($data);
+
+    return view('index');
 });
