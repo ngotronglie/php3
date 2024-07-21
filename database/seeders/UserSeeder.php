@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
                 'username' => $faker->userName,
                 'email' => $faker->unique()->safeEmail,
                 'password' => Hash::make('password'), // Mã hóa mật khẩu mặc định là 'password'
+                'phone' => $faker->unique()->safePhone($faker->phoneNumber),
                 'role' => $roles[array_rand($roles)], // Chọn ngẫu nhiên giữa 'admin' và 'user'
             ]);
         }

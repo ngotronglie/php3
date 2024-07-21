@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('userName');
             $table->string('email');
             $table->string('password');
+            $table->string('phone');
             $table->integer('role')->default(0);
         });
         

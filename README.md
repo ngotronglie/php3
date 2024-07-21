@@ -14,7 +14,9 @@
  - Quản lý hóa đơn, in hóa đơn
 
 
+### database 
 
+- [click here](https://drive.google.com/file/d/11YBthFN7ymQVkdyc5hkwEpL24FjltBK9/view?usp=sharing)
 
 ### How to use the Laravel application 
 ----
