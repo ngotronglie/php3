@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\ProductController;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -105,8 +108,56 @@ Route::get('/post', function () {
 
     // $data = App\Models\Post::all(); 
     // $data = App\Models\Post::get()->toArray();
-    $data = App\Models\Post::query()->get()->toArray(); // có query thì sài như query buider
-    dd($data);
+    // $data = App\Models\Post::query()->get()->toArray(); // có query thì sài như query buider
+    // dd($data);
 
+/***
+ * 
+ * 
+ *   -----------------------------------    thêm - sửa - xóa - đọc -------------------------------
+ */
+    // crud
+    //add:
+        // cách 1
+    // $post = new App\Models\Post();
+    // $post->title = 'bài viết kì quặc';
+    // $post->content = 'content bài viết kì quặc';
+    // $post->created_at = new \DateTime();
+    // $post->updated_at = new \DateTime();
+    // $post->save();
+    //     // cách 2: 
+
+    // $post = App\Models\Post::create([
+    //     'title' => 'bài viết kì quặc',
+    //     'content' => 'content bài viết kì quặc',
+    //     'created_at' => new \DateTime(),
+    //     'updated_at' => new \DateTime(),
+    // ]);
+
+
+    // update
+        // cách 1:
+    // $post = App\Models\Post::query()->find(1);
+    // $post->title = 'bài viết kì quặc 7';
+    // $post->content = 'content bài viết kì quặc 7';
+    // $post->save();
+    //     // cách 2:
+    //     $post = App\Models\Post::query()->find(2);
+    //     $post->update([
+    //         'title' => 'bài viết kì quặc 7',
+    //         'content' => 'content bài viết kì quặc 7',
+    //     ]);
+
+
+    // delete
+        // xóa cứng
+
+            $post = App\Models\Post::query()->find(1);
+            $post->delete();
+
+            
     return view('index');
 });
+
+
+Route::get('/product', [ProductController::class, 'index'])->name('product.index');

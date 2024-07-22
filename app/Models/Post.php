@@ -19,4 +19,8 @@ class Post extends Model
 
     // // điều chỉnh connect db
     // protected $connection = 'ten ket noi[mysql]';
+    protected $fillable = [
+        'title',
+        'content',
+    ];
 }
