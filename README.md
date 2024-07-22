@@ -77,3 +77,10 @@ chuyen file anh len folder public storage / uploads/ ....
 ```
 php artisan storage:link
 ```
+
+
+### install toaster
+
+```
+composer require yoeunes/toastr
+```
