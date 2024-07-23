@@ -11,13 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('email_invoice', function (Blueprint $table) {
-            $table->id();
-            $table->integer('orderId');
-            $table->string('subject');
-            $table->date('sentDate');
-
-        });
+        Schema::dropIfExists('email_invoice');
     }
 
     /**

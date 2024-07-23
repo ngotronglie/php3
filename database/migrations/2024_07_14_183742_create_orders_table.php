@@ -11,13 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->integer('userId');
-            $table->date('orderDate');
-            $table->double('totalAmount' ,10,2);
-            $table->integer('status')->default(0);
-        });
+        Schema::dropIfExists('orders');
     }
 
     /**

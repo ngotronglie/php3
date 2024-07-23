@@ -11,12 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cart', function (Blueprint $table) {
-            $table->id();
-            $table->integer('userId');
-            $table->integer('productId');
-            $table->integer('quantity');
-        });
+        Schema::dropIfExists('cart');
     }
 
     /**
