@@ -84,3 +84,15 @@ php artisan storage:link
 ```
 composer require yoeunes/toastr
 ```
+
+
+
+- tao ca migration va model 
+```
+php artisan make:model Category -m
+```
+
+- tao controller co index, store, show, destroy ,...
+```
+php artisan make:controller CategoryController --model=category
+```

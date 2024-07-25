@@ -1,256 +1,105 @@
-<footer class="footer-area section-padding-1">
-    <div class="container-fluid">
-        <div class="footer-top pb-60">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget mb-40">
-                        <div class="footer-logo">
-                            <a href="#"><img alt="" src="../../assets/images/logo/logo.png"></a>
-                            <p>Lorem ipsum dolor sit, consectetur elit, sed do adipisicing eiusmod tempor</p>
-                        </div>
-                        <div class="footer-contact">
-                            <div class="single-footer-contact">
-                                <div class="footer-contact-icon">
-                                    <i class="la la-phone"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>+012 345 678 102</p>
-                                </div>
-                            </div>
-                            <div class="single-footer-contact">
-                                <div class="footer-contact-icon">
-                                    <i class="la la-globe"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p><a href="#">urname@email.com</a></p>
-                                </div>
-                            </div>
-                            <div class="single-footer-contact">
-                                <div class="footer-contact-icon">
-                                    <i class="la la-map-marker"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>Address goes here, Crossroad 123.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-3 col-12">
-                    <div class="footer-widget mb-40 pl-50">
-                        <div class="footer-title">
-                            <h3>Account</h3>
-                        </div>
-                        <div class="footer-list">
-                            <ul>
-                                <li><a href="login-register.html">Login</a></li>
-                                <li><a href="login-register.html">Register</a></li>
-                                <li><a href="contact.html">Help</a></li>
-                                <li><a href="contact-us.html">Support</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-3 col-12">
-                    <div class="footer-widget mb-40">
-                        <div class="footer-title">
-                            <h3>Useful Link</h3>
-                        </div>
-                        <div class="footer-list">
-                            <ul>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="about-us.html">About us</a></li>
-                                <li><a href="#">Store location</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-12">
-                    <div class="footer-widget mb-40">
-                        <div class="footer-title">
-                            <h3>Categories</h3>
-                        </div>
-                        <div class="footer-list">
-                            <ul>
-                                <li><a href="shop.html">Men</a></li>
-                                <li><a href="shop.html">Women</a></li>
-                                <li><a href="shop.html">Jeins</a></li>
-                                <li><a href="shop.html">Shoes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8 col-12">
-                    <div class="footer-widget mb-40">
-                        <div class="footer-title">
-                            <h3>Email for newsletter</h3>
-                        </div>
-                        <div class="subscribe-style">
-                            <p>Lorem ipsum dolor sit, consectetur elit, sed do adipisicing eiusmod tempor</p>
-                            <div id="mc_embed_signup" class="subscribe-form mt-20">
-                                <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style"
-                                    novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post"
-                                    action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
-                                    <div id="mc_embed_signup_scroll" class="mc-form">
-                                        <input class="email" type="email" required=""
-                                            placeholder="Enter your email" name="EMAIL" value="">
-                                        <div class="mc-news" aria-hidden="true">
-                                            <input type="text" value="" tabindex="-1"
-                                                name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                                        </div>
-                                        <div class="clear">
-                                            <input id="mc-embedded-subscribe" class="button" type="submit"
-                                                name="subscribe" value="Subscribe">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom border-top-2 pt-20 pb-20">
+<footer class="section footer-section">
+    <!-- Footer Top Start -->
+    <div class="footer-top section-padding">
         <div class="container">
-            <div class="copyright text-center">
-                <p>Copyright <a href="#">Eliza</a> © 2023. All Right Reserved..</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true"></span></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-5 col-sm-12 col-xs-12">
-                        <div class="tab-content quickview-big-img">
-                            <div id="pro-1" class="tab-pane fade show active">
-                                <img src="../../assets/images/product/quickview-l1.jpg" alt="">
-                            </div>
-                            <div id="pro-2" class="tab-pane fade">
-                                <img src="../../assets/images/product/quickview-l2.jpg" alt="">
-                            </div>
-                            <div id="pro-3" class="tab-pane fade">
-                                <img src="../../assets/images/product/quickview-l3.jpg" alt="">
-                            </div>
-                            <div id="pro-4" class="tab-pane fade">
-                                <img src="../../assets/images/product/quickview-l2.jpg" alt="">
-                            </div>
+            <div class="row mb-n10">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">Contact Us</h2>
+                        <p class="desc-content">Lorem ipsum dolor sit amet, consectetur adipisicing sed do eiusmod
+                            tempor incididun</p>
+                        <!-- Contact Address Start -->
+                        <ul class="widget-address">
+                            <li><span>Address: </span> 123 Main Street, Anytown, CA 12345 - USA.</li>
+                            <li><span>Call to: </span> <a href="#"> (012) 800 456 789-987</a></li>
+                            <li><span>Mail to: </span> <a href="#"> yourmail@example.com</a></li>
+                        </ul>
+                        <!-- Contact Address End -->
+
+                        <!-- Soclial Link Start -->
+                        <div class="widget-social justify-content-start mt-4">
+                            <a title="Facebook" href="#"><i class="fa fa-facebook-f"></i></a>
+                            <a title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a title="Linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            <a title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
+                            <a title="Vimeo" href="#"><i class="fa fa-vimeo"></i></a>
                         </div>
-                        <!-- Thumbnail Large Image End -->
-                        <!-- Thumbnail Image End -->
-                        <div class="quickview-wrap mt-15">
-                            <div class="quickview-slide-active owl-carousel nav nav-style-2" role="tablist">
-                                <a class="active" data-bs-toggle="tab" href="#pro-1"><img
-                                        src="../../assets/images/product/quickview-s1.jpg" alt=""></a>
-                                <a data-bs-toggle="tab" href="#pro-2"><img
-                                        src="../../assets/images/product/quickview-s2.jpg" alt=""></a>
-                                <a data-bs-toggle="tab" href="#pro-3"><img
-                                        src="../../assets/images/product/quickview-s3.jpg" alt=""></a>
-                                <a data-bs-toggle="tab" href="#pro-4"><img
-                                        src="../../assets/images/product/quickview-s2.jpg" alt=""></a>
-                            </div>
-                        </div>
+                        <!-- Social Link End -->
                     </div>
-                    <div class="col-md-7 col-sm-12 col-xs-12">
-                        <div class="product-details-content quickview-content">
-                            <h2>Products Name Here</h2>
-                            <div class="product-details-price">
-                                <span>$18.00 </span>
-                                <span class="old">$20.00 </span>
-                            </div>
-                            <div class="pro-details-rating-wrap">
-                                <div class="pro-details-rating">
-                                    <i class="la la-star"></i>
-                                    <i class="la la-star"></i>
-                                    <i class="la la-star"></i>
-                                    <i class="la la-star"></i>
-                                    <i class="la la-star-half-o"></i>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">Information</h2>
+                        <ul class="widget-list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">Delivery Information</a></li>
+                            <li><a href="about.html">Privacy Policy</a></li>
+                            <li><a href="about.html">Terms & Conditions</a></li>
+                            <li><a href="about.html">Customer Service</a></li>
+                            <li><a href="about.html">Return Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-footer-widget aos-init aos-animate">
+                        <h2 class="widget-title">My Account</h2>
+                        <ul class="widget-list">
+                            <li><a href="account.html">My Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="contact.html">Newsletter</a></li>
+                            <li><a href="contact.html">Help Center</a></li>
+                            <li><a href="contact.html">Conditin</a></li>
+                            <li><a href="contact.html">Term Of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="500">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">Newsletter</h2>
+                        <div class="widget-body">
+                            <p class="desc-content mb-0">Get E-mail updates about our latest shop and special
+                                offers.</p>
+
+                            <!-- Newsletter Form Start -->
+                            <div class="newsletter-form-wrap pt-4">
+                                <form id="mc-form" class="mc-form">
+                                    <input type="email" id="mc-email" class="form-control email-box mb-4"
+                                        placeholder="Enter your email here.." name="EMAIL">
+                                    <button id="mc-submit" class="newsletter-btn btn btn-primary btn-hover-dark"
+                                        type="submit">Subscribe</button>
+                                </form>
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success text-success"></div>
+                                    <!-- mailchimp-success end -->
+                                    <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
                                 </div>
-                                <span>3 Reviews</span>
+                                <!-- mailchimp-alerts end -->
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut
-                                labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud
-                                exercitation ullamco</p>
-                            <div class="pro-details-list">
-                                <ul>
-                                    <li>- 0.5 mm Dail</li>
-                                    <li>- Inspired vector icons</li>
-                                    <li>- Very modern style </li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-size-color">
-                                <div class="pro-details-color-wrap">
-                                    <span>Color</span>
-                                    <div class="pro-details-color-content">
-                                        <ul>
-                                            <li class="blue"></li>
-                                            <li class="maroon active"></li>
-                                            <li class="gray"></li>
-                                            <li class="green"></li>
-                                            <li class="yellow"></li>
-                                            <li class="white"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="pro-details-size">
-                                    <span>Size</span>
-                                    <div class="pro-details-size-content">
-                                        <ul>
-                                            <li><a href="#">s</a></li>
-                                            <li><a href="#">m</a></li>
-                                            <li><a href="#">l</a></li>
-                                            <li><a href="#">xl</a></li>
-                                            <li><a href="#">xxl</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pro-details-quality">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton"
-                                        value="2">
-                                </div>
-                                <div class="pro-details-cart btn-hover">
-                                    <a href="#">Add To Cart</a>
-                                </div>
-                                <div class="pro-details-wishlist">
-                                    <a title="Add To Wishlist" href="#"><i class="la la-heart-o"></i></a>
-                                </div>
-                                <div class="pro-details-compare">
-                                    <a title="Add To Compare" href="#"><i class="la la-refresh"></i></a>
-                                </div>
-                            </div>
-                            <div class="pro-details-meta">
-                                <span>Categories :</span>
-                                <ul>
-                                    <li><a href="#">Minimal,</a></li>
-                                    <li><a href="#">Furniture,</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-meta">
-                                <span>Tag :</span>
-                                <ul>
-                                    <li><a href="#">Fashion, </a></li>
-                                    <li><a href="#">Furniture,</a></li>
-                                    <li><a href="#">Electronic</a></li>
-                                </ul>
-                            </div>
+                            <!-- Newsletter Form End -->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Modal end -->
-</div>
+    <!-- Footer Top End -->
+
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <div class="copyright-content">
+                        <p class="mb-0">© 2023 <strong>Destry </strong> Made width <i
+                                class="fa fa-heart text-danger"></i> by <a
+                                href="https://hasthemes.com/">HasThemes.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom End -->
+</footer>

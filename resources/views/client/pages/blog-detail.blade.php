@@ -1,240 +1,292 @@
 @extends('client.index');
 
 @section('main')
-    <div class="breadcrumb-area pt-95 pb-100 bg-img" style="background-image:url(assets/images/bg/breadcrumb.jpg);">
-        <div class="container">
-            <div class="breadcrumb-content text-center">
-                <div class="breadcrumb-title">
-                    <h2>blog details</h2>
+    <div class="section">
+
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area bg-light">
+            <div class="container-fluid">
+                <div class="breadcrumb-content text-center">
+                    <h1 class="title">Blog Details</h1>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home </a>
+                        </li>
+                        <li class="active"> Blog Details</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="active">blog details</li>
-                </ul>
             </div>
         </div>
+        <!-- Breadcrumb Area End -->
+
     </div>
-    <div class="blog-area pt-100 pb-100">
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Details Section Start -->
+    <div class="section section-margin">
         <div class="container">
-            <div class="row flex-row-reverse">
-                <div class="col-lg-9">
-                    <div class="blog-details-wrapper ml-20">
-                        <div class="blog-details-top">
-                            <div class="blog-details-img mb-20">
-                                <img alt="" src="assets/images/blog/blog-details.jpg">
+
+            <div class="row">
+                <!-- Blog Main Area Start -->
+                <div class="col-lg-9 m-auto overflow-hidden">
+
+                    <!-- Single Post Details Start -->
+                    <div class="blog-details mb-10">
+
+                        <!-- Blog Details Image Start -->
+                        <div class="image mb-6" data-aos="fade-up" data-aos-delay="300">
+                            <img class="fit-image" src="assets/images/blog/blog-details/1.jpg" alt="Blog">
+                        </div>
+                        <!-- Blog Details Image End -->
+
+                        <!-- Single Post Details Content Start -->
+                        <div class="content" data-aos="fade-up" data-aos-delay="300">
+
+                            <!-- Title Start -->
+                            <h2 class="title mb-3">Fashion for the Clueless</h2>
+                            <!-- Title End -->
+
+                            <!-- Meta List Start -->
+                            <div class="meta-list mb-3">
+                                <span>By <a href="#" class="meta-item author mr-1">Admin,</a></span>
+                                <span class="meta-item date">May 21, 2023</span>
+                                <span class="meta-item comment"><a href="#">03 Comments</a></span>
                             </div>
-                            <div class="blog-details-content">
-                                <span>Fashion</span>
-                                <h3>14 Emerging Fashion Influen Who Are Going to Own 2018</h3>
-                                <div class="blog-dec-meta">
-                                    <span><i class="la la-user"></i> Matthew</span>
-                                    <span><i class="la la-clock-o"></i> May 29, 2019</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididugnt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprhendit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                <blockquote class="la-blockquote">
-                                    <p>“There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in believable.”</p>
-                                    <span>Carol Ross • CEO/ FOUNDER</span>
+                            <!-- Meta List End -->
+
+                            <!-- Description Start -->
+                            <div class="desc">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration some form, by injected humour, or randomised words which don't look
+                                    even slightly believable. Ifyouare going to use a passage of Lorem Ipsum, you need to be
+                                    sure there isanything embarrassing hidden i the middletext.There are many variations of
+                                    passages of Lorem Ipsum available, but the majority hsuffered alteration in some form,
+                                    by injected humour.</p>
+
+                                <!-- Blockquote Start -->
+                                <blockquote class="blockquote mt-5 mb-5">
+                                    <p>“Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos. Sed rutrum at ante in lacinia. Maecenas dignissim lacus orci, a euismod
+                                        ipsum ornare convallis. Morbi tristique consectetur purus, quis cursus ante posuere
+                                        nec. Cras quis pharetra ex. Cras vehicula dignissim suscipit.”</p>
+                                    <footer class="blockquote-footer">
+                                        <span>John Doe</span>
+                                    </footer>
                                 </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                </p>
-                                <div class="blog-details-img mt-50 mb-45">
-                                    <img alt="" src="assets/images/blog/blog-details-2.jpg">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="next-previous-post mt-50">
-                            <a href="#"> <i class="la la-angle-left"></i> prev post</a>
-                            <a href="#">next post <i class="la la-angle-right"></i></a>
-                        </div>
-                        <div class="blog-comment-wrapper mt-55">
-                            <h4 class="blog-dec-title">comments : 02</h4>
-                            <div class="single-comment-wrapper mt-35">
-                                <div class="blog-comment-img">
-                                    <img src="assets/images/blog/comment-1.jpg" alt="">
-                                </div>
-                                <div class="blog-comment-content">
-                                    <h4>Anthony Stephens</h4>
-                                    <span>October 14, 2019 </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam, </p>
-                                    <div class="blog-details-btn">
-                                        <a href="#">reply</a>
+                                <!-- Blockquote End -->
+
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration some form, by injected humour, or randomised words which don't look
+                                    even slightly believable.</p>
+                                <div class="row mt-6">
+                                    <div class="col-sm-6 col-12 mb-6" data-aos="fade-right" data-aos-delay="300">
+                                        <img class="fit-image" src="assets/images/blog/blog-details/2.jpg" alt="Blog">
+                                    </div>
+                                    <div class="col-sm-6 col-12 mb-6" data-aos="fade-left" data-aos-delay="300">
+                                        <img class="fit-image" src="assets/images/blog/blog-details/3.jpg" alt="Blog">
                                     </div>
                                 </div>
+                                <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+                                    necessary, making this the first true generator on the Internet. It uses a dictionary o
+                                    first true generator on the Internet. It uses a dictionary of over 200 Latin words,
+                                    combined with a handful of model </p>
                             </div>
-                            <div class="single-comment-wrapper ml-120 mt-50">
-                                <div class="blog-comment-img">
-                                    <img src="assets/images/blog/comment-2.jpg" alt="">
-                                </div>
-                                <div class="blog-comment-content">
-                                    <h4>DX Joxova</h4>
-                                    <span>October 14, 2019 </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam, </p>
-                                    <div class="blog-details-btn">
-                                        <a href="#">reply</a>
-                                    </div>
+                            <!-- Description End -->
+
+                        </div>
+                        <!-- Single Post Details Content End -->
+
+                        <!-- Single Post Details Footer Start -->
+                        <div class="single-post-details-footer mt-10" data-aos="fade-up" data-aos-delay="300">
+                            <!-- Shear Article Start -->
+                            <div class="share-article">
+                                <span class="left-side">
+                                    <a href="#"> <i class="fa fa-long-arrow-left"></i> Older Post</a>
+                                </span>
+                                <h6 class="share-title text-uppercase">Share this article</h6>
+                                <span class="right-side">
+                                    <a href="#">Newer Post <i class="fa fa-long-arrow-right"></i></a>
+                                </span>
+                            </div>
+                            <!-- Shear Article Start -->
+                            <!-- Social Shear Start -->
+                            <div class="widget-social border-top pt-2">
+                                <a title="Facebook" href="#"><i class="fa fa-facebook-f"></i></a>
+                                <a title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a title="Linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                <a title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
+                                <a title="Vimeo" href="#"><i class="fa fa-vimeo"></i></a>
+                            </div>
+                            <!-- Social Shear Start -->
+                        </div>
+                        <!-- Single Post Details Footer End -->
+
+                    </div>
+                    <!-- Single Post Details End -->
+
+                    <!-- Comments Area Wrapper Start -->
+                    <div class="comment-area-wrapper mt-5" data-aos="fade-up" data-aos-delay="400">
+
+                        <!-- Title Start -->
+                        <h3 class="title mb-6">5 Comments</h3>
+                        <!-- Title End -->
+
+                        <!-- Single Comment Wrapper Start -->
+                        <div class="single-comment-wrap mb-10">
+                            <a class="author-thumb" href="#">
+                                <img src="assets/images/blog/thumb/1.jpg" alt="Author">
+                            </a>
+                            <div class="comments-info">
+                                <p class="mb-1">This book is a treatise on the theory of ethics, very popular during the
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet</p>
+                                <div class="comment-footer d-flex justify-content-between">
+                                    <span class="author"><a href="#"><strong>Duy</strong></a> - July 30, 2023</span>
+                                    <a href="#" class="btn-reply"><i class="fa fa-reply"></i> Reply</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="blog-reply-wrapper mt-50">
-                            <h4 class="blog-dec-title">post a comment</h4>
-                            <form class="blog-form" action="#">
+                        <!-- Single Comment Wrapper End -->
+
+                        <!-- Single Comment Wrapper Start -->
+                        <div class="single-comment-wrap mb-10 comment-reply">
+                            <a class="author-thumb" href="#">
+                                <img src="assets/images/blog/thumb/2.jpg" alt="Author">
+                            </a>
+                            <div class="comments-info">
+                                <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis
+                                    odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>
+                                <div class="comment-footer d-flex justify-content-between">
+                                    <span class="author"><a href="#"><strong>Alex</strong></a> - August 30,
+                                        2023</span>
+                                    <a href="#" class="btn-reply"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Comment Wrapper End -->
+
+                        <!-- Single Comment Wrapper Start -->
+                        <div class="single-comment-wrap mb-10">
+                            <a class="author-thumb" href="#">
+                                <img src="assets/images/blog/thumb/3.jpg" alt="Author">
+                            </a>
+                            <div class="comments-info">
+                                <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis
+                                    odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>
+                                <div class="comment-footer d-flex justify-content-between">
+                                    <span class="author"><a href="#"><strong>Tuntuni</strong></a> - September 10,
+                                        2023</span>
+                                    <a href="#" class="btn-reply"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Comment Wrapper End -->
+
+                        <!-- Single Comment Wrapper Start -->
+                        <div class="single-comment-wrap mb-10">
+                            <a class="author-thumb" href="#">
+                                <img src="assets/images/blog/thumb/4.jpg" alt="Author">
+                            </a>
+                            <div class="comments-info">
+                                <p class="mb-1">This book is a treatise on the theory of ethics, very popular during the
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet</p>
+                                <div class="comment-footer d-flex justify-content-between">
+                                    <span class="author"><a href="#"><strong>Jack</strong></a> - October 23,
+                                        2023</span>
+                                    <a href="#" class="btn-reply"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Comment Wrapper End -->
+
+                        <!-- Single Comment Wrapper Start -->
+                        <div class="single-comment-wrap comment-reply">
+                            <a class="author-thumb" href="#">
+                                <img src="assets/images/blog/thumb/2.jpg" alt="Author">
+                            </a>
+                            <div class="comments-info">
+                                <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis
+                                    odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>
+                                <div class="comment-footer d-flex justify-content-between">
+                                    <span class="author"><a href="#"><strong>Alex</strong></a> - October 26,
+                                        2023</span>
+                                    <a href="#" class="btn-reply"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Comment Wrapper End -->
+
+                    </div>
+                    <!-- Comments Area Wrapper End -->
+
+                    <!-- Blog Comments Form Start -->
+                    <div class="blog-comment-form-wrapper mt-10" data-aos="fade-up" data-aos-delay="400">
+
+                        <!-- Blog Comment Form Title Start -->
+                        <div class="blog-comment-form-title">
+                            <h2 class="title">Leave a comment</h2>
+                        </div>
+                        <!-- Blog Comment Form Title End -->
+
+                        <!-- Comment Box Start -->
+                        <div class="comment-box">
+                            <form action="#">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="leave-form">
-                                            <input type="text" placeholder="Full Name">
+
+                                    <!-- Message Input Start -->
+                                    <div class="col-12 col-custom">
+                                        <div class="input-item mt-4 mb-4">
+                                            <textarea cols="30" rows="5" name="comment" class="rounded-0 w-100 custom-textarea input-area"
+                                                placeholder="Message"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="leave-form">
-                                            <input type="email" placeholder="Email Address ">
+                                    <!-- Message Input End -->
+
+                                    <!-- Name Input Start -->
+                                    <div class="col-md-6 col-custom">
+                                        <div class="input-item mb-4">
+                                            <input class="rounded-0 w-100 input-area name" type="text"
+                                                placeholder="Name">
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="text-leave">
-                                            <textarea placeholder="Message"></textarea>
-                                            <input type="submit" value="SEND MESSAGE">
+                                    <!-- Name Input End -->
+
+                                    <!-- Email Input Start -->
+                                    <div class="col-md-6 col-custom">
+                                        <div class="input-item mb-4">
+                                            <input class="rounded-0 w-100 input-area email" type="text"
+                                                placeholder="Email">
                                         </div>
                                     </div>
+                                    <!-- Email Input End -->
+
+                                    <!-- Website Input Start -->
+                                    <div class="col-12-6 col-custom">
+                                        <div class="input-item mb-4">
+                                            <input class="rounded-0 w-100 input-area name" type="text"
+                                                placeholder="Website">
+                                        </div>
+                                    </div>
+                                    <!-- Website Input End -->
+
+                                    <!-- Submit Button Start -->
+                                    <div class="col-12 col-custom mt-4">
+                                        <button type="submit" class="btn btn-primary btn-hover-dark">Post
+                                            comment</button>
+                                    </div>
+                                    <!-- Submit Button End -->
+
                                 </div>
                             </form>
                         </div>
+                        <!-- Comment Box End -->
+
                     </div>
+                    <!-- Blog Comments Form End -->
+
                 </div>
-                <div class="col-lg-3">
-                    <div class="sidebar-style">
-                        <div class="sidebar-widget">
-                            <h4 class="pro-sidebar-title">Search </h4>
-                            <div class="pro-sidebar-search mb-50 mt-25">
-                                <form class="pro-sidebar-search-form" action="#">
-                                    <input type="text" placeholder="Search here...">
-                                    <button>
-                                        <i class="la la-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget">
-                            <h4 class="pro-sidebar-title">Categories </h4>
-                            <div class="sidebar-widget-list mt-20">
-                                <ul>
-                                    <li>
-                                        <div class="sidebar-widget-list-left">
-                                            <input type="checkbox" value=""> <a href="#">Women <span>4</span>
-                                            </a>
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sidebar-widget-list-left">
-                                            <input type="checkbox" value=""> <a href="#">Men <span>4</span> </a>
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sidebar-widget-list-left">
-                                            <input type="checkbox" value=""> <a href="#">Bags <span>4</span>
-                                            </a>
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sidebar-widget-list-left">
-                                            <input type="checkbox" value=""> <a href="#">Accessories
-                                                <span>4</span> </a>
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget mt-40">
-                            <h4 class="pro-sidebar-title">Recent Projects </h4>
-                            <div class="sidebar-project-wrap mt-30">
-                                <div class="single-sidebar-blog">
-                                    <div class="sidebar-blog-img">
-                                        <a href="#"><img src="assets/images/blog/sidebar-1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="sidebar-blog-content">
-                                        <span>Photography</span>
-                                        <h4><a href="#">Project Name Here</a></h4>
-                                    </div>
-                                </div>
-                                <div class="single-sidebar-blog">
-                                    <div class="sidebar-blog-img">
-                                        <a href="#"><img src="assets/images/blog/sidebar-2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="sidebar-blog-content">
-                                        <span>Branding</span>
-                                        <h4><a href="#">Project Name Here</a></h4>
-                                    </div>
-                                </div>
-                                <div class="single-sidebar-blog">
-                                    <div class="sidebar-blog-img">
-                                        <a href="#"><img src="assets/images/blog/sidebar-3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="sidebar-blog-content">
-                                        <span>Design</span>
-                                        <h4><a href="#">Project Name Here</a></h4>
-                                    </div>
-                                </div>
-                                <div class="single-sidebar-blog">
-                                    <div class="sidebar-blog-img">
-                                        <a href="#"><img src="assets/images/blog/sidebar-1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="sidebar-blog-content">
-                                        <span>Photography</span>
-                                        <h4><a href="#">Project Name Here</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget mt-30">
-                            <h4 class="pro-sidebar-title">Archive </h4>
-                            <div class="sidebar-widget-archive mt-20">
-                                <ul>
-                                    <li>
-                                        <a href="#">June 2018</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">May 2018</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">April 2018</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget mt-50">
-                            <h4 class="pro-sidebar-title">Tag </h4>
-                            <div class="sidebar-widget-tag mt-25">
-                                <ul>
-                                    <li><a href="#">Clothing</a></li>
-                                    <li><a href="#">Accessories</a></li>
-                                    <li><a href="#">For Men</a></li>
-                                    <li><a href="#">Women</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Blog Main Area End -->
             </div>
+
         </div>
     </div>
 @endsection

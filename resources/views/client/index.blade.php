@@ -1,18 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
 @include('client.includes.head')
 
 <body>
+    @include('client.includes.header')
 
-    <div class="main-wrapper wrapper-2">
-        @include('client.includes.header')
-        @include('client.includes.mobile-menu')
-        @include('client.includes.search-start')
-        @include('client.includes.cart')
+    {{-- ------------------------------------------------ --}}
+
+    {{-- @include('client.includes.main') --}}
+    @yield('main')
+
+    {{-- ------------------------------------------------ --}}
+
+    <!-- Footer Section Start -->
+    @include('client.includes.footer')
+    <!-- Footer Section End -->
+
+    @include('client.includes.index-modal')
 
 
-        @yield('main')
+    @include('client.includes.script')
 
-        @include('client.includes.footer')
-        <!-- JS
-============================================ -->
 
-        @include('client.includes.script')
+</body>
+
+</html>

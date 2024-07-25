@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,48 +17,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.index');
+Route::group(['prefix' => ''], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
+    
+});
+Route::group(['prefix' => '/admin'], function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    
 });
 
-Route::get('/about', function () {
-    return view('client.pages.about');
+Route::get('/contact' , function(){
+    return view('client.pages.contact');
 });
-
-Route::get('/shop', function () {
-    return view('client.pages.shop');
-});
-
-Route::get('/product-detail', function () {
-    return view('client.pages.product-detail');
-});
-Route::get('/cart', function () {
-    return view('client.pages.cart');
-});
-Route::get('/checkout', function () {
-    return view('client.pages.checkout');
-});
-Route::get('/blog', function () {
+Route::get('/blog' , function(){
     return view('client.pages.blog');
 });
-Route::get('/blog-detail', function () {
+Route::get('/blog-detail' , function(){
     return view('client.pages.blog-detail');
 });
-Route::get('/login-register', function () {
-    return view('client.pages.login-register');
-});
-Route::get('/my-account', function () {
-    return view('client.pages.my-account');
-});
-
-Route::resource('/', MainController::class);
-Route::resource('/contact', ContactController::class);
-
-
-
-//// Route admin
-
-
-Route::get('/dashboad', function () {
-    return view('admin.dashboad');
+Route::get('/shop' , function(){
+    return view('client.pages.shop');
 });
