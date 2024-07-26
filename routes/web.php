@@ -38,3 +38,18 @@ Route::get('/blog-detail' , function(){
 Route::get('/shop' , function(){
     return view('client.pages.shop');
 });
+Route::get('/wishlist' , function(){
+    return view('client.pages.wishlist');
+});
+Route::get('/cart' , function(){
+    return view('client.pages.cart');
+});
+Route::get('/checkout' , function(){
+    return view('client.pages.checkout');
+});
+Route::get('/login' , function(){
+    return view('client.pages.login');
+});
+Route::get('/register' , function(){
+    return view('client.pages.register');
+});

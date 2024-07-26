@@ -1,323 +1,493 @@
 @extends('client.index');
 
 @section('main')
-    <div class="breadcrumb-area pt-95 pb-100 bg-img" style="background-image:url(assets/images/bg/breadcrumb.jpg);">
-        <div class="container">
-            <div class="breadcrumb-content text-center">
-                <div class="breadcrumb-title">
-                    <h2>checkout page</h2>
+    <!-- Breadcrumb Section Start -->
+    <div class="section">
+
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area bg-light">
+            <div class="container-fluid">
+                <div class="breadcrumb-content text-center">
+                    <h1 class="title">Checkout</h1>
+                    <ul>
+                        <li>
+                            <a href="/">Home </a>
+                        </li>
+                        <li class="active"> Checkout</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li class="active">checkout </li>
-                </ul>
             </div>
         </div>
+        <!-- Breadcrumb Area End -->
+
     </div>
-    <div class="checkout-main-area pt-100 pb-100">
+    <!-- Breadcrumb Section End -->
+
+    <!-- Checkout Section Start -->
+    <div class="section section-margin">
         <div class="container">
-            <div class="customer-zone mb-20">
-                <p class="cart-page-title">Returning customer? <a class="checkout-click1" href="#">Click here to
-                        login</a></p>
-                <div class="checkout-login-info">
-                    <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new
-                        customer, please proceed to the Billing & Shipping section.</p>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sin-checkout-login">
-                                    <label>Username or email address <span>*</span></label>
-                                    <input type="text" name="user-name">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sin-checkout-login">
-                                    <label>Passwords <span>*</span></label>
-                                    <input type="password" name="user-password">
-                                </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Coupon Accordion Start -->
+                    <div class="coupon-accordion">
+
+                        <!-- Title Start -->
+                        <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3>
+                        <!-- Title End -->
+
+                        <!-- Checkout Login Start -->
+                        <div id="checkout-login" class="coupon-content">
+                            <div class="coupon-info">
+                                <p class="coupon-text mb-2">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed
+                                    est sit amet ipsum luctus.</p>
+
+                                <!-- Form Start -->
+                                <form action="#">
+                                    <!-- Input Email Start -->
+                                    <p class="form-row-first">
+                                        <label>Username or email <span class="required">*</span></label>
+                                        <input type="text">
+                                    </p>
+                                    <!-- Input Email End -->
+
+                                    <!-- Input Password Start -->
+                                    <p class="form-row-last">
+                                        <label>Password <span class="required">*</span></label>
+                                        <input type="password">
+                                    </p>
+                                    <!-- Input Password End -->
+
+                                    <!-- Remember Password Start -->
+                                    <p class="form-row mb-2">
+                                        <input type="checkbox" id="remember_me">
+                                        <label for="remember_me" class="checkbox-label">Remember me</label>
+                                    </p>
+                                    <!-- Remember Password End -->
+
+                                    <!-- Lost Password Start -->
+                                    <p class="lost-password"><a href="#">Lost your password?</a></p>
+                                    <!-- Lost Password End -->
+
+                                </form>
+                                <!-- Form End -->
+
                             </div>
                         </div>
-                        <div class="button-remember-wrap">
-                            <button class="button" type="submit">Login</button>
-                            <div class="checkout-login-toggle-btn">
-                                <input type="checkbox">
-                                <label>Remember me</label>
+                        <!-- Checkout Login End -->
+
+                        <!-- Title Start -->
+                        <h3 class="title">Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
+                        <!-- Title End -->
+
+                        <!-- Checkout Coupon Start -->
+                        <div id="checkout_coupon" class="coupon-checkout-content">
+                            <div class="coupon-info">
+                                <form action="#">
+                                    <p class="checkout-coupon d-flex">
+                                        <input placeholder="Coupon code" type="text">
+                                        <input class="btn btn-dark btn-hover-primary rounded-0" value="Apply Coupon"
+                                            type="submit">
+                                    </p>
+                                </form>
                             </div>
                         </div>
-                        <div class="lost-password">
-                            <a href="#">Lost your password?</a>
-                        </div>
-                    </form>
-                    <div class="checkout-login-social">
-                        <span>Login with:</span>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Google</a></li>
-                        </ul>
+                        <!-- Checkout Coupon End -->
+
                     </div>
+                    <!-- Coupon Accordion End -->
                 </div>
             </div>
-            <div class="customer-zone mb-20">
-                <p class="cart-page-title">Have a coupon? <a class="checkout-click3" href="#">Click here to enter your
-                        code</a></p>
-                <div class="checkout-login-info3">
+            <div class="row mb-n4">
+                <div class="col-lg-6 col-12 mb-4">
+
+                    <!-- Checkbox Form Start -->
                     <form action="#">
-                        <input type="text" placeholder="Coupon code">
-                        <input type="submit" value="Apply Coupon">
-                    </form>
-                </div>
-            </div>
-            <div class="checkout-wrap pt-30">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="billing-info-wrap mr-50">
-                            <h3>Billing Details</h3>
+                        <div class="checkbox-form">
+
+                            <!-- Checkbox Form Title Start -->
+                            <h3 class="title">Billing Details</h3>
+                            <!-- Checkbox Form Title End -->
+
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>First Name <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>Last Name <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Company Name <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-select mb-20">
-                                        <label>Country <abbr class="required" title="required">*</abbr></label>
-                                        <select>
-                                            <option>Select a country</option>
-                                            <option>Azerbaijan</option>
-                                            <option>Bahamas</option>
-                                            <option>Bahrain</option>
-                                            <option>Bangladesh</option>
-                                            <option>Barbados</option>
+
+                                <!-- Select Country Name Start -->
+                                <div class="col-md-12 mb-6">
+                                    <div class="country-select">
+                                        <label>Country <span class="required">*</span></label>
+                                        <select class="myniceselect nice-select wide rounded-0">
+                                            <option data-display="Bangladesh">Bangladesh</option>
+                                            <option value="uk">London</option>
+                                            <option value="rou">Romania</option>
+                                            <option value="fr">French</option>
+                                            <option value="de">Germany</option>
+                                            <option value="aus">Australia</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Street Address <abbr class="required" title="required">*</abbr></label>
-                                        <input class="billing-address" placeholder="House number and street name"
-                                            type="text">
-                                        <input placeholder="Apartment, suite, unit etc." type="text">
+                                <!-- Select Country Name End -->
+
+                                <!-- First Name Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>First Name <span class="required">*</span></label>
+                                        <input placeholder="" type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Town / City <abbr class="required" title="required">*</abbr></label>
+                                <!-- First Name Input End -->
+
+                                <!-- Last Name Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Last Name <span class="required">*</span></label>
+                                        <input placeholder="" type="text">
+                                    </div>
+                                </div>
+                                <!-- Last Name Input End -->
+
+                                <!-- Company Name Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Company Name</label>
+                                        <input placeholder="" type="text">
+                                    </div>
+                                </div>
+                                <!-- Company Name Input End -->
+
+                                <!-- Address Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Address <span class="required">*</span></label>
+                                        <input placeholder="Street address" type="text">
+                                    </div>
+                                </div>
+                                <!-- Address Input End -->
+
+                                <!-- Optional Text Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
+                                    </div>
+                                </div>
+                                <!-- Optional Text Input End -->
+
+                                <!-- Town or City Name Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Town / City <span class="required">*</span></label>
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="billing-info mb-20">
-                                        <label>State / County <abbr class="required" title="required">*</abbr></label>
+                                <!-- Town or City Name Input End -->
+
+                                <!-- State or Country Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>State / County <span class="required">*</span></label>
+                                        <input placeholder="" type="text">
+                                    </div>
+                                </div>
+                                <!-- State or Country Input End -->
+
+                                <!-- Postcode or Zip Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Postcode / Zip <span class="required">*</span></label>
+                                        <input placeholder="" type="text">
+                                    </div>
+                                </div>
+                                <!-- Postcode or Zip Input End -->
+
+                                <!-- Email Address Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Email Address <span class="required">*</span></label>
+                                        <input placeholder="" type="email">
+                                    </div>
+                                </div>
+                                <!-- Email Address Input End -->
+
+                                <!-- Phone Number Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Phone <span class="required">*</span></label>
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Postcode / ZIP <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
+                                <!-- Phone Number Input End -->
+
+                                <!-- Checkout Form List checkbox Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list create-acc">
+                                        <input id="cbox" type="checkbox">
+                                        <label for="cbox" class="checkbox-label">Create an account?</label>
+                                    </div>
+                                    <div id="cbox-info" class="checkout-form-list create-account">
+                                        <p class="mb-2">Create an account by entering the information below. If you are a
+                                            returning customer please login at the top of the page.</p>
+                                        <label>Account password <span class="required">*</span></label>
+                                        <input placeholder="Password" type="password">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Email Address <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text">
-                                    </div>
-                                </div>
+                                <!-- Checkout Form List checkbox End -->
+
                             </div>
-                            <div class="checkout-account mb-25">
-                                <input class="checkout-toggle2" type="checkbox">
-                                <span>Create an account?</span>
-                            </div>
-                            <div class="checkout-account-toggle open-toggle2 mb-30">
-                                <label>Email Address</label>
-                                <input placeholder="Password" type="password">
-                            </div>
-                            <div class="checkout-account mt-25">
-                                <input class="checkout-toggle" type="checkbox">
-                                <span>Ship to a different address?</span>
-                            </div>
-                            <div class="different-address open-toggle mt-30">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>First Name</label>
-                                            <input type="text">
-                                        </div>
+
+                            <!-- Different Address Start -->
+                            <div class="different-address">
+                                <!-- Ship Different Title Checkbox Start -->
+                                <div class="ship-different-title">
+                                    <div>
+                                        <input id="ship-box" type="checkbox">
+                                        <label for="ship-box" class="checkbox-label">Ship to a different address?</label>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>Last Name</label>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="billing-info mb-20">
-                                            <label>Company Name</label>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="billing-select mb-20">
-                                            <label>Country</label>
-                                            <select>
-                                                <option>Select a country</option>
-                                                <option>Azerbaijan</option>
-                                                <option>Bahamas</option>
-                                                <option>Bahrain</option>
-                                                <option>Bangladesh</option>
-                                                <option>Barbados</option>
+                                </div>
+                                <!-- Ship Different Title Checkbox End -->
+
+                                <!-- Ship Box Info Start -->
+                                <div id="ship-box-info" class="row mt-2">
+
+                                    <!-- Select Country Name Start -->
+                                    <div class="col-md-12">
+                                        <div class="myniceselect country-select clearfix">
+                                            <label>Country <span class="required">*</span></label>
+                                            <select class="myniceselect nice-select wide rounded-0">
+                                                <option data-display="Bangladesh">Bangladesh</option>
+                                                <option value="uk">London</option>
+                                                <option value="rou">Romania</option>
+                                                <option value="fr">French</option>
+                                                <option value="de">Germany</option>
+                                                <option value="aus">Australia</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="billing-info mb-20">
-                                            <label>Street Address</label>
-                                            <input class="billing-address" placeholder="House number and street name"
-                                                type="text">
-                                            <input placeholder="Apartment, suite, unit etc." type="text">
+                                    <!-- Select Country Name End -->
+
+                                    <!-- First Name Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>First Name <span class="required">*</span></label>
+                                            <input placeholder="" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="billing-info mb-20">
-                                            <label>Town / City</label>
+                                    <!-- First Name Input End -->
+
+                                    <!-- Last Name Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Last Name <span class="required">*</span></label>
+                                            <input placeholder="" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Last Name Input End -->
+
+                                    <!-- Company Name Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Company Name</label>
+                                            <input placeholder="" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Company Name End -->
+
+                                    <!-- Address Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Address <span class="required">*</span></label>
+                                            <input placeholder="Street address" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Address Input End -->
+
+                                    <!-- Optional Text Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Optional Text End -->
+
+                                    <!-- Town or City Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Town / City <span class="required">*</span></label>
                                             <input type="text">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>State / County</label>
+                                    <!-- Town or City Input End -->
+
+                                    <!-- State or Country Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>State / County <span class="required">*</span></label>
+                                            <input placeholder="" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- State or Country Input End -->
+
+                                    <!-- Postcode or Zip Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Postcode / Zip <span class="required">*</span></label>
+                                            <input placeholder="" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Postcode or Zip Input End -->
+
+                                    <!-- Email Address Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Email Address <span class="required">*</span></label>
+                                            <input placeholder="" type="email">
+                                        </div>
+                                    </div>
+                                    <!-- Email Address Input End -->
+
+                                    <!-- Phone Number Input Start -->
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Phone <span class="required">*</span></label>
                                             <input type="text">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>Postcode / ZIP</label>
-                                            <input type="text">
+                                    <!-- Phone Number Input End -->
+
+                                </div>
+                                <!-- Ship Box Info End -->
+
+                                <!-- Order Notes Textarea Start -->
+                                <div class="order-notes mt-3 mb-n2">
+                                    <div class="checkout-form-list checkout-form-list-2">
+                                        <label>Order Notes</label>
+                                        <textarea id="checkout-mess" cols="30" rows="10"
+                                            placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                    </div>
+                                </div>
+                                <!-- Order Notes Textarea End -->
+
+                            </div>
+                            <!-- Different Address End -->
+                        </div>
+                    </form>
+                    <!-- Checkbox Form End -->
+
+                </div>
+
+                <div class="col-lg-6 col-12 mb-4">
+
+                    <!-- Your Order Area Start -->
+                    <div class="your-order-area border">
+
+                        <!-- Title Start -->
+                        <h3 class="title">Your order</h3>
+                        <!-- Title End -->
+
+                        <!-- Your Order Table Start -->
+                        <div class="your-order-table table-responsive">
+                            <table class="table">
+
+                                <!-- Table Head Start -->
+                                <thead>
+                                    <tr class="cart-product-head">
+                                        <th class="cart-product-name text-start">Product</th>
+                                        <th class="cart-product-total text-end">Total</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Head End -->
+
+                                <!-- Table Body Start -->
+                                <tbody>
+                                    <tr class="cart_item">
+                                        <td class="cart-product-name text-start ps-0"> Some Winter Collections<strong
+                                                class="product-quantity"> × 2</strong></td>
+                                        <td class="cart-product-total text-end pe-0"><span class="amount">£145.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart_item">
+                                        <td class="cart-product-name text-start ps-0"> Small Scale Style<strong
+                                                class="product-quantity"> × 4</strong></td>
+                                        <td class="cart-product-total text-end pe-0"><span class="amount">£204.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!-- Table Body End -->
+
+                                <!-- Table Footer Start -->
+                                <tfoot>
+                                    <tr class="cart-subtotal">
+                                        <th class="text-start ps-0">Cart Subtotal</th>
+                                        <td class="text-end pe-0"><span class="amount">£349.00</span></td>
+                                    </tr>
+                                    <tr class="order-total">
+                                        <th class="text-start ps-0">Order Total</th>
+                                        <td class="text-end pe-0"><strong><span class="amount">£349.00</span></strong>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                                <!-- Table Footer End -->
+
+                            </table>
+                        </div>
+                        <!-- Your Order Table End -->
+
+                        <!-- Payment Accordion Order Button Start -->
+                        <div class="payment-accordion-order-button">
+                            <div class="payment-accordion">
+                                <div class="single-payment">
+                                    <h5 class="panel-title mb-3">
+                                        <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample"
+                                            aria-expanded="false" aria-controls="collapseExample">
+                                            Direct Bank Transfer.
+                                        </a>
+                                    </h5>
+                                    <div class="collapse show" id="collapseExample">
+                                        <div class="card card-body rounded-0">
+                                            <p>Make your payment directly into our bank account. Please use your Order ID as
+                                                the payment reference. Your order won’t be shipped until the funds have
+                                                cleared in our account.</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>Phone</label>
-                                            <input type="text">
+                                </div>
+                                <div class="single-payment">
+                                    <h5 class="panel-title mb-3">
+                                        <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-2"
+                                            aria-expanded="false" aria-controls="collapseExample-2">
+                                            Cheque Payment.
+                                        </a>
+                                    </h5>
+                                    <div class="collapse" id="collapseExample-2">
+                                        <div class="card card-body rounded-0">
+                                            <p>Make your payment directly into our bank account. Please use your Order ID as
+                                                the payment reference. Your order won’t be shipped until the funds have
+                                                cleared in our account.</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="billing-info mb-20">
-                                            <label>Email Address</label>
-                                            <input type="text">
+                                </div>
+                                <div class="single-payment">
+                                    <h5 class="panel-title mb-3">
+                                        <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-3"
+                                            aria-expanded="false" aria-controls="collapseExample-3">
+                                            Paypal.
+                                        </a>
+                                    </h5>
+                                    <div class="collapse" id="collapseExample-3">
+                                        <div class="card card-body rounded-0">
+                                            <p>Make your payment directly into our bank account. Please use your Order ID as
+                                                the payment reference. Your order won’t be shipped until the funds have
+                                                cleared in our account.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="additional-info-wrap">
-                                <label>Order notes</label>
-                                <textarea placeholder="Notes about your order, e.g. special notes for delivery. " name="message"></textarea>
+                            <div class="order-button-payment">
+                                <button class="btn btn-dark btn-hover-primary rounded-0 w-100">Place Order</button>
                             </div>
                         </div>
+                        <!-- Payment Accordion Order Button End -->
                     </div>
-                    <div class="col-lg-5">
-                        <div class="your-order-area">
-                            <h3>Your order</h3>
-                            <div class="your-order-wrap gray-bg-4">
-                                <div class="your-order-info-wrap">
-                                    <div class="your-order-info">
-                                        <ul>
-                                            <li>Product <span>Total</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="your-order-middle">
-                                        <ul>
-                                            <li>Product Name X 1 <span>$329 </span></li>
-                                            <li>Product Name X 1 <span>$329 </span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="your-order-info order-subtotal">
-                                        <ul>
-                                            <li>Subtotal <span>$329 </span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="your-order-info order-shipping">
-                                        <ul>
-                                            <li>Shipping <p>Enter your full address </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="your-order-info order-total">
-                                        <ul>
-                                            <li>Total <span>$273.00 </span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="pay-top sin-payment">
-                                        <input id="payment_method_1" class="input-radio" type="radio" value="cheque"
-                                            checked="checked" name="payment_method">
-                                        <label for="payment_method_1"> Direct Bank Transfer </label>
-                                        <div class="payment-box payment_method_bacs">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as
-                                                the payment reference.</p>
-                                        </div>
-                                    </div>
-                                    <div class="pay-top sin-payment">
-                                        <input id="payment-method-2" class="input-radio" type="radio" value="cheque"
-                                            name="payment_method">
-                                        <label for="payment-method-2">Check payments</label>
-                                        <div class="payment-box payment_method_bacs">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as
-                                                the payment reference.</p>
-                                        </div>
-                                    </div>
-                                    <div class="pay-top sin-payment">
-                                        <input id="payment-method-3" class="input-radio" type="radio" value="cheque"
-                                            name="payment_method">
-                                        <label for="payment-method-3">Cash on delivery </label>
-                                        <div class="payment-box payment_method_bacs">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as
-                                                the payment reference.</p>
-                                        </div>
-                                    </div>
-                                    <div class="pay-top sin-payment sin-payment-3">
-                                        <input id="payment-method-4" class="input-radio" type="radio" value="cheque"
-                                            name="payment_method">
-                                        <label for="payment-method-4">PayPal <img alt=""
-                                                src="assets/images/icon-img/payment.png"><a href="#">What is
-                                                PayPal?</a></label>
-                                        <div class="payment-box payment_method_bacs">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as
-                                                the payment reference.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Place-order mt-40">
-                                <a href="#">Place Order</a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Your Order Area End -->
                 </div>
             </div>
         </div>
     </div>
+    <!-- Checkout Section End -->
 @endsection

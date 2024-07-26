@@ -25,4 +25,6 @@
 
 
     <link rel="stylesheet" href="{{ asset('theme/client/assets/css/style.css') }}" />
+
+
 </head>
