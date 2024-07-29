@@ -19,7 +19,7 @@
                         <div class="main-menu position-relative">
                             <ul>
                                 <li class="has-children">
-                                    <a href="#">About</a>
+                                    <a href="/about">About</a>
                                 </li>
                                 <li class="has-children position-static">
                                     <a href="/shop"><span>Shop</span> <i class="fa fa-angle-down"></i></a>

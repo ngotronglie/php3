@@ -17,14 +17,34 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+// client
 Route::group(['prefix' => ''], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     
 });
-Route::group(['prefix' => '/admin'], function () {
+
+// login
+Route::get('/login' ,[AdminController::class, 'login'])->name('admin.login');
+Route::post('/login' ,[AdminController::class, 'check_login']);
+
+
+// register
+Route::get('/register' ,[AdminController::class, 'register'])->name('admin.register');
+Route::post('/register' ,[AdminController::class, 'check_register']);
+
+// -------------------
+Route::get('/register' , function(){
+    return view('client.pages.register');
+});
+
+
+
+Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     
 });
+
+// pages
 
 Route::get('/contact' , function(){
     return view('client.pages.contact');
@@ -47,9 +67,7 @@ Route::get('/cart' , function(){
 Route::get('/checkout' , function(){
     return view('client.pages.checkout');
 });
-Route::get('/login' , function(){
-    return view('client.pages.login');
-});
-Route::get('/register' , function(){
-    return view('client.pages.register');
+
+Route::get('/about' , function(){
+    return view('client.pages.about');
 });

@@ -5,7 +5,7 @@
     <div class="section">
 
         <!-- Breadcrumb Area Start -->
-        <div class="breadcrumb-area bg-light">
+        <div class="breadcrumb-area bg-light mb-5">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
                     <h1 class="title">Login</h1>
@@ -28,15 +28,16 @@
 
         <!-- Form Action Start -->
         <form action="#" method="post">
+            @csrf
             <!-- Input Email Or Username Start -->
             <div class="single-input-item mb-3">
-                <input type="email" placeholder="Email or Username">
+                <input type="email" name="email" placeholder="Email or Username">
             </div>
             <!-- Input Email Or Username End -->
 
             <!-- Input Password Start -->
             <div class="single-input-item mb-3">
-                <input type="password" placeholder="Enter your Password">
+                <input type="password" name="password" placeholder="Enter your Password">
             </div>
             <!-- Input Password End -->
 

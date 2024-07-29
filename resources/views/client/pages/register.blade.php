@@ -2,7 +2,7 @@
 
 @section('main')
     <!-- Breadcrumb Section Start -->
-    <div class="section">
+    <div class="section mb-5">
 
         <!-- Breadcrumb Area Start -->
         <div class="breadcrumb-area bg-light">
@@ -23,7 +23,7 @@
     </div>
     <!-- Breadcrumb Section End -->
 
-    <div class="register-wrapper container mt-5 ">
+    <div class="register-wrapper container  ">
 
         <!-- Login Title & Content Start -->
         <div class="section-content text-center mb-5">
@@ -34,28 +34,38 @@
 
         <!-- Form Action Start -->
         <form action="#" method="post">
-
-            <!-- Input First Name Start -->
-            <div class="single-input-item mb-3">
-                <input type="text" placeholder="First Name">
-            </div>
-            <!-- Input First Name End -->
+            @csrf
 
             <!-- Input Last Name Start -->
             <div class="single-input-item mb-3">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder=" User Name" name="name">
+                @error('name')
+                <div class="alert alert-danger mt-2" role="alert">
+                    {{ $message }}
+                  </div>
+                @enderror
             </div>
             <!-- Input Last Name End -->
 
             <!-- Input Email Or Username Start -->
             <div class="single-input-item mb-3">
-                <input type="email" placeholder="Email or Username">
+                <input type="email" name="email" placeholder="Enter your Email">
+                @error('email')
+                <div class="alert alert-danger mt-2" role="alert">
+                    {{ $message }}
+                  </div>
+                @enderror
             </div>
             <!-- Input Email Or Username End -->
 
             <!-- Input Password Start -->
             <div class="single-input-item mb-3">
-                <input type="password" placeholder="Enter your Password">
+                <input type="password" name="password" placeholder="Enter your Password">
+                @error('password')
+                <div class="alert alert-danger mt-2" role="alert">
+                    {{ $message }}
+                  </div>
+                @enderror
             </div>
             <!-- Input Password End -->
 
