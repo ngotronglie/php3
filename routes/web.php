@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Middleware\CheckRoleAdminMiddleware;
+use App\Http\Middleware\CheckRoleStaffMiddleware;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 /*
@@ -57,3 +61,11 @@ Route::get('/checkout' , function(){
 Route::get('/about' , function(){
     return view('client.pages.about');
 });
+
+
+Route::get('admin',function(){
+    return view('admin.index');
+})->middleware(CheckRoleAdminMiddleware::class);
+Route::get('staff',function(){
+    return view('staff.index');
+})->middleware(CheckRoleStaffMiddleware::class);

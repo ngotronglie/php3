@@ -42,13 +42,26 @@
                     <div class="col-xl-2 col-6">
                         <div class="header-actions">
 
-                            <!-- Search Header Action Button Start -->
-                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-search"><i
-                                    class="pe-7s-search"></i></a>
-                            <!-- Search Header Action Button End -->
+                            @if (Auth::check())
+                                <h6 class="h6">Hello, {{ Auth::user()->name }} </h6>
+                                <a href="{{ route('logout') }}"
+                                    class="header-action-btn header-action-btn-logout d-none d-md-block"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit(); return confirm('Logout, Are you sure?')">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
 
-                            <!-- User Account Header Action Button Start -->
-                            <a href="/login" class="header-action-btn d-none d-md-block"><i class="pe-7s-user"></i></a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            @else
+                                <a href="/login" class="header-action-btn d-none d-md-block">
+                                    <i class="pe-7s-user"></i>
+                                </a>
+                            @endif
+
+
+
                             <!-- User Account Header Action Button End -->
 
                             <!-- Wishlist Header Action Button Start -->
