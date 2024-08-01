@@ -27,22 +27,23 @@
 
 
         <!-- Form Action Start -->
-        <form action="#" method="post">
+        <form action="{{ route('login') }}" method="post">
             @csrf
             <!-- Input Email Or Username Start -->
             <div class="single-input-item mb-3">
-                <input type="email" name="email" placeholder="Enter or Email">
+                <input type="email" name="email" placeholder="Enter or Email" value="{{ old('email') }}">
                 @error('email')
-                    <small>{{ $message }}</small>
+                    <div class="text-center mt-2 bg-danger text-light">{{ $message }}</div>
                 @enderror
+
             </div>
             <!-- Input Email Or Username End -->
 
             <!-- Input Password Start -->
             <div class="single-input-item mb-3">
-                <input type="password" name="password" placeholder="Enter your Password">
+                <input type="password" name="password" placeholder="Enter your Password" value="{{ old('password') }}">
                 @error('password')
-                    <small>{{ $message }}</small>
+                    <div class="text-center mt-2 bg-danger text-light">{{ $message }}</div>
                 @enderror
             </div>
             <!-- Input Password End -->

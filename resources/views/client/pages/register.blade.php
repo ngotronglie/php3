@@ -33,38 +33,38 @@
         <!-- Login Title & Content End -->
 
         <!-- Form Action Start -->
-        <form action="#" method="post">
+        <form action="{{ route('register') }}" method="post">
             @csrf
 
             <!-- Input Last Name Start -->
             <div class="single-input-item mb-3">
-                <input type="text" placeholder=" User Name" name="name">
+                <input type="text" placeholder=" User Name" name="name" value="{{ old('name') }}">
                 @error('name')
-                <div class="alert alert-danger mt-2" role="alert">
-                    {{ $message }}
-                  </div>
+                    <div class="alert alert-danger mt-2" role="alert">
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <!-- Input Last Name End -->
 
             <!-- Input Email Or Username Start -->
             <div class="single-input-item mb-3">
-                <input type="email" name="email" placeholder="Enter your Email">
+                <input type="email" name="email" placeholder="Enter your Email" value="{{ old('email') }}">
                 @error('email')
-                <div class="alert alert-danger mt-2" role="alert">
-                    {{ $message }}
-                  </div>
+                    <div class="alert alert-danger mt-2" role="alert">
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <!-- Input Email Or Username End -->
 
             <!-- Input Password Start -->
             <div class="single-input-item mb-3">
-                <input type="password" name="password" placeholder="Enter your Password">
+                <input type="password" name="password" placeholder="Enter your Password" value="{{ old('password') }}">
                 @error('password')
-                <div class="alert alert-danger mt-2" role="alert">
-                    {{ $message }}
-                  </div>
+                    <div class="alert alert-danger mt-2" role="alert">
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <!-- Input Password End -->

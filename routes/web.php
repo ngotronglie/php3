@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,34 +15,22 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-// client
-Route::group(['prefix' => ''], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home.index');
-    
+Route::get('/', function () {
+    return view('client.includes.main');
 });
 
-// login
-Route::get('/login' ,[AdminController::class, 'login'])->name('admin.login');
-Route::post('/login' ,[AdminController::class, 'check_login']);
+/**
+ * client view 
+ */
+Route::get('/login',[AuthController::class, 'ShowViewLogin'] );
+Route::post('/login',[AuthController::class, 'LoginRequest'] )->name('login');
+Route::post('/register',[AuthController::class, 'RegisterRequest'] )->name('register');
+Route::get('/register',[AuthController::class, 'ShowviewRegister'] );
+Route::post('/logout',[AuthController::class, 'logout'] )->name('logout');
 
-
-// register
-Route::get('/register' ,[AdminController::class, 'register'])->name('admin.register');
-Route::post('/register' ,[AdminController::class, 'check_register']);
-
-// -------------------
-Route::get('/register' , function(){
-    return view('client.pages.register');
-});
-
-
-
-Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    
-});
-
-// pages
+/**
+ * pages view
+ */
 
 Route::get('/contact' , function(){
     return view('client.pages.contact');
