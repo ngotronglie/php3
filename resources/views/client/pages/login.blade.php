@@ -31,13 +31,19 @@
             @csrf
             <!-- Input Email Or Username Start -->
             <div class="single-input-item mb-3">
-                <input type="email" name="email" placeholder="Email or Username">
+                <input type="email" name="email" placeholder="Enter or Email">
+                @error('email')
+                    <small>{{ $message }}</small>
+                @enderror
             </div>
             <!-- Input Email Or Username End -->
 
             <!-- Input Password Start -->
             <div class="single-input-item mb-3">
                 <input type="password" name="password" placeholder="Enter your Password">
+                @error('password')
+                    <small>{{ $message }}</small>
+                @enderror
             </div>
             <!-- Input Password End -->
 
