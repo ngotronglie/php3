@@ -122,6 +122,12 @@ class AdminDanhMucController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $DanhMuc = DanhMuc::findOrFail($id);
+        $DanhMuc->delete();
+        if ($DanhMuc->hinh_anh && Storage::disk('public')->exists($DanhMuc->hinh_anh)) {
+            Storage::disk('public')->delete($DanhMuc->hinh_anh);
+        }
+        toastr()->success('Xóa danh mục thành công!');
+        return redirect()->route('admin.categories.list');
     }
 }

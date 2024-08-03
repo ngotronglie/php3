@@ -1,4 +1,5 @@
 @extends('admin.index')
+
 @section('content')
     <!-- Tables Without Borders -->
 
@@ -44,9 +45,16 @@
                             <div class="hstack gap-3 fs-15">
                                 <a href="{{ route('admin.categories.edit', $item->id) }}" class="link-primary"><i
                                         class="ri-settings-4-line"></i></a>
-                                <a onclick="return confirm('Are you sure?')"
-                                    href="{{ route('admin.categories.destroy', $item->id) }}" class="link-danger"><i
-                                        class="ri-delete-bin-5-line"></i></a>
+
+                                <!-- Form for deletion -->
+                                <form action="{{ route('admin.categories.destroy', $item->id) }}" method="POST"
+                                    onsubmit="return confirm('Are you sure you want to delete this item?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button style="border: none; background: none" type="submit" class="link-danger">
+                                        <i class="ri-delete-bin-5-line"></i>
+                                    </button>
+                                </form>
                             </div>
                         </td>
                     </tr>
