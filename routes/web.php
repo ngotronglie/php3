@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminDanhMucController;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\CheckRoleAdminMiddleware;
 use App\Http\Middleware\CheckRoleStaffMiddleware;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -66,13 +68,14 @@ Route::get('/about' , function(){
 Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(function () {
     // Route cho quản lý danh mục
     Route::prefix('categories')->group(function () {
-        // Route::get('/', [CategoryController::class, 'index'])->name('admin.categories.index');
-        // Route::get('{id}', [CategoryController::class, 'show'])->name('admin.categories.show');
-        // Route::get('create', [CategoryController::class, 'create'])->name('admin.categories.create');
-        // Route::post('create', [CategoryController::class, 'store'])->name('admin.categories.store');
-        // Route::get('{id}/edit', [CategoryController::class, 'edit'])->name('admin.categories.edit');
-        // Route::put('{id}', [CategoryController::class, 'update'])->name('admin.categories.update');
-        // Route::delete('{id}', [CategoryController::class, 'destroy'])->name('admin.categories.destroy');
+        Route::get('/' , [AdminDanhMucController::class, 'index' ])->name('admin.categories.list');
+        Route::get('/create' , [AdminDanhMucController::class, 'create' ])->name('admin.categories.create');
+        Route::post('/store' , [AdminDanhMucController::class, 'store' ])->name('admin.categories.store');
+        Route::get('/show/{id}' , [AdminDanhMucController::class, 'show' ])->name('admin.categories.show');
+        Route::get('/{id}/edit' , [AdminDanhMucController::class, 'edit' ])->name('admin.categories.edit');
+        Route::put('/{id}/update' , [AdminDanhMucController::class, 'update' ])->name('admin.categories.update');
+        Route::delete('/{id}/destroy' , [AdminDanhMucController::class, 'destroy' ])->name('admin.categories.destroy');
+
     });
 
     // Route cho quản lý sản phẩm
@@ -87,7 +90,7 @@ Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(fun
     });
 });
 Route::get('admin',function(){
-    return view('admin.index');
+    return view('admin.includes.main');
 })->middleware(CheckRoleAdminMiddleware::class);
 Route::get('staff',function(){
     return view('staff.index');

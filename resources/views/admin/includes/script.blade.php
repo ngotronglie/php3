@@ -20,3 +20,6 @@
 
 <!-- App js -->
 <script src="{{ asset('theme/admin/assets/js/app.js') }}"></script>
+
+<!-- prismjs plugin -->
+<script src="{{ asset('theme/admin/assets/libs/prismjs/prism.js') }}"></script>
