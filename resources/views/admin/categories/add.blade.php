@@ -7,7 +7,8 @@
 
         <div class="mb-3">
             <label for="hinh_anh" class="form-label">Hình ảnh</label>
-            <input type="file" class="form-control" id="hinh_anh" name="hinh_anh">
+            <input type="file" class="form-control" id="hinh_anh" name="hinh_anh" onchange="showImage(event)">
+            <img id="preview-image" class="mt-2" src="" style="width: 100px; display: none" alt="">
             @error('hinh_anh')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -36,4 +37,22 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+@endsection
+
+@section('js')
+    <script>
+        function showImage(event) {
+            const fileInput = event.target;
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.querySelector('#preview-image');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection

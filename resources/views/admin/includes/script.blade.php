@@ -1,3 +1,5 @@
+@yield('js')
+
 <script src="{{ asset('theme/admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('theme/admin/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('theme/admin/assets/libs/node-waves/waves.min.js') }}"></script>

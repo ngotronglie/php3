@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DanhMucResquet;
 use App\Models\DanhMuc;
 use Illuminate\Http\Request;
 
@@ -34,19 +35,25 @@ class AdminDanhMucController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(DanhMucResquet $request)
     {
-        
-        $request->validate([
-            'hinh_anh' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'ten_danh_muc' => 'required|string|max:255',
-            'trang_thai' => 'required|boolean',
-        ]);
+        if($request->ismethod('POST'))
+        {
+            $param = $request->except('_token');
 
-        toastr()->success('Thêm danh mục thành công !');
-        return redirect()->route('admin.categories.list');
-
-    
+            if($request->hasFile('hinh_anh'))
+            {
+                $filePath = $request->file('hinh_anh')->store('uploads/danhmucs', 'public');
+            }
+            else
+            {
+                $filePath = null;
+            }
+            $param['hinh_anh'] = $filePath;
+            DanhMuc::create($param);
+            toastr()->success('Thêm danh mục thành công !');
+            return redirect()->route('admin.categories.list');
+        }
     }
 
     /**
