@@ -56,7 +56,7 @@
                         role="button" aria-expanded="false" aria-controls="sidebarDashboards"> <!-- đang làm -->
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Danh mục</span>
                     </a> --}}
-                    <a class="nav-link menu-link" href="{{ route('admin.categories.list') }}"><i
+                    <a class="nav-link menu-link" href="{{ route('admin.products.list') }}"><i
                             class="ri-product-hunt-fill"></i>San
                         pham</a>
                 </li> <!-- end Dashboard Menu -->

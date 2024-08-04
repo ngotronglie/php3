@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminDanhMucController;
+use App\Http\Controllers\Admin\AdminSanPhamController;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\CheckRoleAdminMiddleware;
 use App\Http\Middleware\CheckRoleStaffMiddleware;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -75,18 +77,17 @@ Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(fun
         Route::get('/{id}/edit' , [AdminDanhMucController::class, 'edit' ])->name('admin.categories.edit');
         Route::put('/{id}/update' , [AdminDanhMucController::class, 'update' ])->name('admin.categories.update');
         Route::delete('/{id}/destroy' , [AdminDanhMucController::class, 'destroy' ])->name('admin.categories.destroy');
-
     });
 
     // Route cho quản lý sản phẩm
-    Route::prefix('products')->group(function () {
-        // Route::get('/', [ProductController::class, 'index'])->name('admin.products.index');
-        // Route::get('{id}', [ProductController::class, 'show'])->name('admin.products.show');
-        // Route::get('create', [ProductController::class, 'create'])->name('admin.products.create');
-        // Route::post('create', [ProductController::class, 'store'])->name('admin.products.store');
-        // Route::get('{id}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
-        // Route::put('{id}', [ProductController::class, 'update'])->name('admin.products.update');
-        // Route::delete('{id}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
+    Route::prefix('product')->group(function () {
+        Route::get('/', [AdminSanPhamController::class, 'index'])->name('admin.products.list');
+        Route::get('/show/{id}', [AdminSanPhamController::class, 'show'])->name('admin.products.show');
+        Route::get('/create', [AdminSanPhamController::class, 'create'])->name('admin.products.create');
+        Route::post('/store', [AdminSanPhamController::class, 'store'])->name('admin.products.store');
+        Route::get('{id}/edit', [AdminSanPhamController::class, 'edit'])->name('admin.products.edit');
+        Route::put('/{id}/update', [AdminSanPhamController::class, 'update'])->name('admin.products.update');
+        Route::delete('{id}/destroy', [AdminSanPhamController::class, 'destroy'])->name('admin.products.destroy');
     });
 });
 Route::get('admin',function(){
