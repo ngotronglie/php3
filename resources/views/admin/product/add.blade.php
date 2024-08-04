@@ -79,22 +79,13 @@
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
-
-                <!-- Trạng thái -->
-                <div class="mb-3">
-                    <label for="is_pype" class="form-label">Trạng thái</label>
-                    <select class="form-select" id="is_pype" name="is_pype">
-                        <option value="1">Hiển thị</option>
-                        <option value="0">Ẩn</option>
-                    </select>
-                    @error('is_pype')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-
                 <!-- Tùy chỉnh khác -->
                 <div class="mb-3">
                     <label class="form-label">Tùy chỉnh khác</label>
+                    <div class="form-check form-switch mb-3">
+                        <input type="checkbox" class="form-check-input" id="is_pype" name="is_pype" checked>
+                        <label class="form-check-label" for="is_pype">Trạng thái</label>
+                    </div>
                     <div class="form-check form-switch mb-3">
                         <input type="checkbox" class="form-check-input" id="is_new" name="is_new" checked>
                         <label class="form-check-label" for="is_new">Hàng mới</label>
@@ -181,8 +172,8 @@
                             </div>
                         </div>
                     </div>
-                    <textarea name="noidung" id="noi_dung_content" class="d-none"></textarea>
-                    @error('noidung')
+                    <textarea name="noi_dung" id="noi_dung_content" class="d-none"></textarea>
+                    @error('noi_dung')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
@@ -202,7 +193,7 @@
             });
 
             // Cập nhật nội dung Quill Editor với dữ liệu cũ
-            quill.root.innerHTML = `{{ old('noidung') }}`;
+            quill.root.innerHTML = `{{ old('noi_dung') }}`;
 
             // Cập nhật giá trị của textarea ẩn khi nội dung Quill Editor thay đổi
             quill.on('text-change', function() {

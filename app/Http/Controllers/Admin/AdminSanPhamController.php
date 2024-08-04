@@ -39,11 +39,12 @@ class AdminSanPhamController extends Controller
     // Trong controller
     public function store(SanPhamRequest $request)
     {
-        // Kiểm tra dữ liệu nhận được
         // dd($request->all());
+        // Kiểm tra dữ liệu nhận được
         if ($request->isMethod('POST')) {
             $params = $request->except('_token');
             // chuyen doi gia tri check box thanh boolean
+            $params['is_pype'] = $request->has('is_pype') ? 1 : 0;
             $params['is_new'] = $request->has('is_new') ? 1 : 0;
             $params['is_hot'] = $request->has('is_hot') ? 1 : 0;
             $params['is_hot_deal'] = $request->has('is_hot_deal') ? 1 : 0;
