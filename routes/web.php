@@ -1,12 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Middleware\CheckRoleAdminMiddleware;
-use App\Http\Middleware\CheckRoleStaffMiddleware;
-use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\AdminBannerController;
 use App\Http\Controllers\Admin\AdminDanhMucController;
 use App\Http\Controllers\Admin\AdminSanPhamController;
+use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+use App\Http\Middleware\CheckRoleAdminMiddleware;
+use App\Http\Middleware\CheckRoleStaffMiddleware;
+use Illuminate\Support\Facades\Route;
+
+
 
 
 
@@ -66,6 +70,7 @@ Route::get('/checkout', function () {
 Route::get('/about', function () {
     return view('client.pages.about');
 });
+Route::get('/product-detail/{id}', [ProductController::class, 'detailSanPham'])->name('product-detail');
 
 
 Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(function () {
@@ -78,6 +83,17 @@ Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(fun
         Route::get('/{id}/edit', [AdminDanhMucController::class, 'edit'])->name('admin.categories.edit');
         Route::put('/{id}/update', [AdminDanhMucController::class, 'update'])->name('admin.categories.update');
         Route::delete('/{id}/destroy', [AdminDanhMucController::class, 'destroy'])->name('admin.categories.destroy');
+    });
+
+    //banner
+    Route::prefix('banners')->group(function () {
+        Route::get('/', [AdminBannerController::class, 'index'])->name('admin.banners.list');
+        Route::get('/create', [AdminBannerController::class, 'create'])->name('admin.banners.create');
+        Route::post('/store', [AdminBannerController::class, 'store'])->name('admin.banners.store');
+        Route::get('/show/{id}', [AdminBannerController::class, 'show'])->name('admin.banners.show');
+        Route::get('/{id}/edit', [AdminBannerController::class, 'edit'])->name('admin.banners.edit');
+        Route::put('/{id}/update', [AdminBannerController::class, 'update'])->name('admin.banners.update');
+        Route::delete('/{id}/destroy', [AdminBannerController::class, 'destroy'])->name('admin.banners.destroy');
     });
 
     // Route cho quản lý sản phẩm

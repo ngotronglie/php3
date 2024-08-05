@@ -82,27 +82,34 @@
                 <!-- Tùy chỉnh khác -->
                 <div class="mb-3">
                     <label class="form-label">Tùy chỉnh khác</label>
+
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input" id="is_pype" name="is_pype" checked>
-                        <label class="form-check-label" for="is_pype">Trạng thái</label>
+                        <input type="checkbox" class="form-check-input" id="is_type" name="is_type"
+                            {{ old('is_type', 1) ? 'checked' : '' }}>
+                        <label class="form-check-label" for="is_type">Trạng thái</label>
                     </div>
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input" id="is_new" name="is_new" checked>
+                        <input type="checkbox" class="form-check-input" id="is_new" name="is_new"
+                            {{ old('is_new', 1) ? 'checked' : '' }}>
                         <label class="form-check-label" for="is_new">Hàng mới</label>
                     </div>
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input" id="is_hot" name="is_hot" checked>
+                        <input type="checkbox" class="form-check-input" id="is_hot" name="is_hot"
+                            {{ old('is_hot', 1) ? 'checked' : '' }}>
                         <label class="form-check-label" for="is_hot">Hàng hot</label>
                     </div>
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input" id="is_hot_deal" name="is_hot_deal" checked>
+                        <input type="checkbox" class="form-check-input" id="is_hot_deal" name="is_hot_deal"
+                            {{ old('is_hot_deal', 1) ? 'checked' : '' }}>
                         <label class="form-check-label" for="is_hot_deal">Hàng hot deal</label>
                     </div>
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input" id="is_show_home" name="is_show_home" checked>
+                        <input type="checkbox" class="form-check-input" id="is_show_home" name="is_show_home"
+                            {{ old('is_show_home', 1) ? 'checked' : '' }}>
                         <label class="form-check-label" for="is_show_home">Hiển thị trang chủ</label>
                     </div>
                 </div>
+
             </div>
 
             <div class="col-md-6">

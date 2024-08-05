@@ -60,6 +60,14 @@
                             class="ri-product-hunt-fill"></i>San
                         pham</a>
                 </li> <!-- end Dashboard Menu -->
+                <li class="nav-item">
+                    {{-- <a class="nav-link menu-link" href="{{ route('admin.categories.list') }}" data-bs-toggle="collapse"
+                        role="button" aria-expanded="false" aria-controls="sidebarDashboards"> <!-- đang làm -->
+                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Danh mục</span>
+                    </a> --}}
+                    <a class="nav-link menu-link" href="{{ route('admin.banners.list') }}"><i
+                            class="bx bx-copy-alt"></i>Banner</a>
+                </li> <!-- end Dashboard Menu -->
 
 
 

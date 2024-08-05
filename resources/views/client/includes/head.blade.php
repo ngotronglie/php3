@@ -26,5 +26,15 @@
 
     <link rel="stylesheet" href="{{ asset('theme/client/assets/css/style.css') }}" />
 
+    <!-- Vendor CSS (Icon Font) -->
+
+    <link rel="stylesheet" href="{{ asset('theme/client/css/vendor/fontawesome.min.cs') }}">
+    <link rel="stylesheet" href="{{ asset('theme/client/css/vendor/pe-icon-7-stroke.min.cs') }}">
+
+
+    <!-- Plugins CSS (All Plugins Files) -->
+
+    <link rel="stylesheet" href="{{ asset('theme/client/css/plugins/lightgallery.min.css ') }}" />
+
 
 </head>

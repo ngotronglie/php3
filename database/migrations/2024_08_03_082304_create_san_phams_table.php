@@ -25,7 +25,7 @@ return new class extends Migration
             $table->unsignedBigInteger('luot_xem')->default(0);
             $table->date('ngay_nhap');
             $table->foreignIdFor(DanhMuc::class)->constrained();
-            $table->boolean('is_pype')->default(false);
+            $table->boolean('is_type')->default(false);
             $table->boolean('is_new')->default(false);
             $table->boolean('is_hot')->default(false);
             $table->boolean('is_hot_deal')->default(false);
