@@ -5,19 +5,12 @@ use App\Http\Controllers\Admin\AdminDanhMucController;
 use App\Http\Controllers\Admin\AdminSanPhamController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Staff\StaffBannerController;
 use App\Http\Middleware\CheckRoleAdminMiddleware;
 use App\Http\Middleware\CheckRoleStaffMiddleware;
 use Illuminate\Support\Facades\Route;
-
-
-
-
-
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.includes.main');
-});
+Route::get('/', [ClientController::class, 'index']);
 
 /**
  * client view 

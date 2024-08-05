@@ -3,54 +3,38 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
 
-                <!-- Hero Slider Item Start -->
-                <div class="hero-slide-item swiper-slide">
-                    <!-- Hero Slider Bg Image Start -->
-                    <div class="hero-slide-bg">
-                        <img src="{{ asset('theme/client/assets/images/slider/slide-1.jpg') }}" alt="Slider Image" />
-                    </div>
-                    <!-- Hero Slider Bg image End -->
+                @foreach ($Banner as $key => $item)
+                    <!-- Hero Slider Item Start -->
+                    <div class="hero-slide-item swiper-slide">
+                        <!-- Hero Slider Bg Image Start -->
+                        <div class="hero-slide-bg">
+                            <img src="
+                            @if (strpos($item->image, 'http') === 0) 
+                                {{ $item->image }} 
+                            @else 
+                                {{ Storage::url($item->image) }} @endif"
+                                alt="Slider Image" />
 
-                    <!-- Hero Slider Content Start -->
-                    <div class="container">
-                        <div class="hero-slide-content">
-                            <h2 class="title">
-                                Women New <br />
-                                Collection
-                            </h2>
-                            <p>Up to 70% off selected Product</p>
-                            <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
                         </div>
-                    </div>
-                    <!-- Hero Slider Content End -->
-                </div>
-                <!-- Hero Slider Item End -->
+                        <!-- Hero Slider Bg image End -->
 
-                <!-- Hero Slider Item Start -->
-                <div class="hero-slide-item swiper-slide">
-
-                    <!-- Hero Slider Bg Image Start -->
-                    <div class="hero-slide-bg">
-                        <img src="{{ asset('theme/client/assets/images/slider/slide-1-2.jpg') }}"
-                            alt="Slider Image" />
-                    </div>
-                    <!-- Hero Slider Bg Image End -->
-
-                    <!-- Hero Slider Content Start -->
-                    <div class="container">
-                        <div class="hero-slide-content">
-                            <h2 class="title">
-                                Trend Fashion<br />
-                                Collection
-                            </h2>
-                            <p>Up to 40% off selected Product</p>
-                            <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                        <!-- Hero Slider Content Start -->
+                        <div class="container">
+                            <div class="hero-slide-content">
+                                <h2 class="title">
+                                    Drop discount <br> product
+                                </h2>
+                                <p> {{ $item->name }}</p>
+                                <a href="/shop" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                            </div>
                         </div>
+                        <!-- Hero Slider Content End -->
                     </div>
-                    <!-- Hero Slider Content End -->
+                    <!-- Hero Slider Item End -->
+                @endforeach
 
-                </div>
-                <!-- Hero Slider Item End -->
+
+
 
             </div>
 
