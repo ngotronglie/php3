@@ -6,9 +6,11 @@ use App\Http\Controllers\Admin\AdminSanPhamController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Staff\StaffBannerController;
 use App\Http\Middleware\CheckRoleAdminMiddleware;
 use App\Http\Middleware\CheckRoleStaffMiddleware;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -123,11 +125,19 @@ Route::get('admin', function () {
     return view('admin.includes.main');
 })->middleware(CheckRoleAdminMiddleware::class);
 Route::get('staff', function () {
-    return view('staff.index');
+    return view('staff.includes.main');
 })->middleware(CheckRoleStaffMiddleware::class);
 
 Route::prefix('staff')->middleware([CheckRoleStaffMiddleware::class])->group(function () {
     // Route cho quản lý banner
-    Route::prefix('categories')->group(function () {
+    //banner
+    Route::prefix('banners')->group(function () {
+        Route::get('/', [StaffBannerController::class, 'index'])->name('staff.banners.list');
+        Route::get('/create', [StaffBannerController::class, 'create'])->name('staff.banners.create');
+        Route::post('/store', [StaffBannerController::class, 'store'])->name('staff.banners.store');
+        Route::get('/show/{id}', [StaffBannerController::class, 'show'])->name('staff.banners.show');
+        Route::get('/{id}/edit', [StaffBannerController::class, 'edit'])->name('staff.banners.edit');
+        Route::put('/{id}/update', [StaffBannerController::class, 'update'])->name('staff.banners.update');
+        Route::delete('/{id}/destroy', [StaffBannerController::class, 'destroy'])->name('staff.banners.destroy');
     });
 });
