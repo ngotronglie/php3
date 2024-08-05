@@ -47,9 +47,8 @@ Route::get('/blog', function () {
 Route::get('/blog-detail', function () {
     return view('client.pages.blog-detail');
 });
-Route::get('/shop', function () {
-    return view('client.pages.shop');
-});
+Route::get('/shop', [ClientController::class, 'shop']);
+Route::get('shop/{id}', [ClientController::class,'shop_danh_muc'])->name('shop_danh_muc');
 Route::get('/wishlist', function () {
     return view('client.pages.wishlist');
 });
