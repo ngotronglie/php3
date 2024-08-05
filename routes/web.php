@@ -109,7 +109,7 @@ Route::prefix('admin')->middleware([CheckRoleAdminMiddleware::class])->group(fun
 
 
     // route quan li user 
-    Route::prefix('User')->group(function () {
+    Route::prefix('user')->group(function () {
         Route::get('/', [AdminUserController::class, 'index'])->name('admin.users.list');
         Route::get('/show/{id}', [AdminUserController::class,  'show'])->name('admin.users.show');
         Route::get('/create', [AdminUserController::class,  'create'])->name('admin.users.create');

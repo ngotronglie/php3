@@ -37,7 +37,7 @@
                         role="button" aria-expanded="false" aria-controls="sidebarDashboards"> <!-- đang làm -->
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Danh mục</span>
                     </a> --}}
-                    <a class="nav-link menu-link" href=""><i {{-- {{ route('user.list') }} --}}
+                    <a class="nav-link menu-link" href="{{ route('admin.users.list') }}"><i
                             class="ri-shield-user-fill"></i>Quan li
                         tai khoan</a>
                 </li> <!-- end Dashboard Menu -->
