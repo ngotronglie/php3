@@ -1,4 +1,4 @@
-@extends('client.index');
+@extends('client.index')
 
 @section('main')
     <div class="breadcrumb-area pt-95 pb-100 bg-img" style="background-image:url(assets/images/bg/breadcrumb.jpg);">

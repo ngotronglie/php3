@@ -1,4 +1,4 @@
-@extends('client.index');
+@extends('client.index')
 
 @section('main')
     <!-- Hero/Intro Slider Start -->

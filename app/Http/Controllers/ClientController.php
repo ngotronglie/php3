@@ -24,7 +24,10 @@ class ClientController extends Controller
     public function index()
     {
         $Banner = DB::table("banners")->where("trang_thai", 1)->Get();
+        $SanPham = DB::table("san_phams")->where('is_type', 1)->Get();
+
         // dd($Banner);
-        return view("client.includes.main", compact("Banner"));
+        // dd($SanPham);
+        return view("client.includes.main", compact("Banner", "SanPham"));
     }
 }
