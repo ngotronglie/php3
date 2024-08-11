@@ -29,3 +29,7 @@ php artisan make:controller DanhMucController --resource
 ```bash
  php artisan storage:link
  ```
+
+```bash
+php artisan make:controller Api/GameController --resource --api
+```

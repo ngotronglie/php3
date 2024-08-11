@@ -129,6 +129,9 @@ class GameController extends Controller
     {
         $game = game::find($id);
         $game->delete();
+        if ($game->cover_art && Storage::disk('public')->exists($game->cover_art)) {
+            Storage::disk('public')->delete($game->cover_art);
+        }
         return redirect()->route('list-game')->with('message', 'xoa thanh cong');
     }
 }

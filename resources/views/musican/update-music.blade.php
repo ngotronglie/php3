@@ -3,6 +3,9 @@
 @section('title')
     sua nhac si
 @endsection
+@if (session('message'))
+    <div class="bg-success">{{ session('message') }}</div>
+@endif
 
 @section('content')
     <form action="{{ route('update-game', $game->id) }}" method="POST" enctype="multipart/form-data" class="container mt-5">

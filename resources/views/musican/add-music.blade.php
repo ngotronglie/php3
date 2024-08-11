@@ -3,6 +3,10 @@
 @section('title')
     them nhac si
 @endsection
+@if (session('message'))
+    <div class="bg-success">{{ session('message') }}</div>
+@endif
+
 
 @section('content')
     <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data" class="container mt-5">

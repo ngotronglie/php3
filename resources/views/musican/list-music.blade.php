@@ -3,6 +3,9 @@
 @section('title')
     Danh sach nhac si
 @endsection
+@if (session('message'))
+    <div class="bg-success">{{ session('message') }}</div>
+@endif
 
 @section('content')
     <table class="table table-striped container hover mt-5">
