@@ -4,7 +4,9 @@
     Danh sach nhac si
 @endsection
 @if (session('message'))
-    <div class="bg-success">{{ session('message') }}</div>
+    <script>
+        alert('{{ session('message') }}');
+    </script>
 @endif
 
 @section('content')

@@ -117,8 +117,6 @@ class GameController extends Controller
             // Chuyển hướng về route `update-game` với thông báo thành công
             return redirect()->route('list-game')->with('message', 'Sửa thành công');
         }
-        // Tìm game theo ID, nếu không tìm thấy sẽ trả về lỗi 404
-
     }
 
 
